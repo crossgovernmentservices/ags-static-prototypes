@@ -10,6 +10,27 @@ base = Blueprint('base', __name__)
 def index():
   return render_template('index.html')
 
-@base.route('/sample')
-def sample():
-  return render_template('sample.html')
+@base.route('/confirm')
+def confirm():
+  return render_template('confirm.html')
+
+@base.route('/choose')
+def choose():
+  return render_template('choiceofidp.html')
+
+@base.route('/select')
+def select():
+  return render_template('selectidps.html')
+
+@base.route('/requestemail')
+def request_email():
+  return render_template('knowyouremail.html')
+
+@base.route('/emailsuggestion')
+def email_suggestion():
+  return render_template('emailsuggestion.html')
+
+@base.route('/firsttime')
+def forst_time():
+  return render_template('firstvisit.html')
+
