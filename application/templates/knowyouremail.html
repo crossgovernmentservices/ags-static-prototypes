@@ -5,7 +5,38 @@
 {% block content %}
 <main id="content" role="main">
 
-  <h1 class="heading-xlarge">Do you know your work email address?</h1>
+  <a href="/" class="link-back">Back</a>
+
+  <h1 class="heading-medium">
+    Do you know your work email?
+  </h1>
+
+  <form>
+    <div class="form-group">
+      <fieldset>
+
+        <legend class="visuallyhidden">Do you know your work email?</legend>
+
+        <label class="block-label selection-button-radio selected" for="know-email-yes">
+          <input id="know-email-yes" type="radio" name="radio-know-email-group" value="Yes" aria-controls="know-email" aria-expanded="true">
+          Yes
+        </label>
+        <div class="panel panel-border-narrow" id="know-email" aria-hidden="false">
+          <label class="form-label" for="work-email">Email address</label>
+          <input class="form-control" name="work-email" type="text" id="work-email">
+        </div>
+
+        <label class="block-label selection-button-radio" for="know-email-no">
+          <input id="know-email-no" type="radio" name="radio-know-email-group" value="No" aria-controls="know-email" aria-expanded="false">
+          No
+        </label>
+
+      </fieldset>
+    </div>
+    <div class="form-group">
+      <button class="button">Confirm</button>
+    </div>
+  </form>
 
 </main>
 {% endblock %}
