@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.Python
+
+flask/
+gen/
+
+# Installer logs
+npm-debug.log
+pip-log.txt
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# GOVUK Assets
+application/templates/govuk_template
+application/static/govuk_*
