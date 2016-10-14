@@ -17,6 +17,7 @@ def create_app(config='config.py', **kwargs):
     app.config.update(kwargs)
 
     register_blueprints(app)
+    register_context_processors(app)
     register_extensions(app)
 
     return app
@@ -28,6 +29,17 @@ def register_blueprints(app):
 
     from application.blueprints.base.views import base
     app.register_blueprint(base)
+
+def register_context_processors(app):
+    """
+    Add template context variables and functions
+    """
+
+    def base_context_processor():
+      return {
+          'asset_path': '/static/govuk_template/assets/'}
+
+    app.context_processor(base_context_processor)
 
 def register_extensions(app):
     """
