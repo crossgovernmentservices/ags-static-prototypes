@@ -11,6 +11,8 @@
 
   <h2 class="heading-large">Pages</h2>
 
+  <h3 class="heading-medium">Broker pages</h3>
+
   <ul class="list-bullet">
     <li>
       <a href="{{ url_for('broker.confirm') }}">Confirm IDP routing</a>
@@ -29,6 +31,23 @@
     </li>
     <li>
       <a href="{{ url_for('broker.first_time') }}">Ask user if first time using broker</a>
+    </li>
+  </ul>
+
+  <h3 class="heading-medium">Notify pages</h3>
+  <ul class="list-bullet">
+    <li>
+      <a href="{{ url_for('notify.register_account') }}">Create account</a>
+    </li>
+  </ul>
+
+  <h3 class="heading-medium">Other pages</h3>
+  <ul class="list-bullet">
+    <li>
+      <a href="{{ url_for('local.sign_in') }}">Sign in</a>
+    </li>
+    <li>
+      <a href="{{ url_for('base.product_page') }}">Product page</a>
     </li>
   </ul>
 
