@@ -30,6 +30,9 @@ def register_blueprints(app):
     from application.blueprints.base.views import base
     app.register_blueprint(base)
 
+    from application.blueprints.broker.views import broker
+    app.register_blueprint(broker)
+
     from application.blueprints.notify.views import notify
     app.register_blueprint(notify)
 

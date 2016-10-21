@@ -13,22 +13,22 @@
 
   <ul class="list-bullet">
     <li>
-      <a href="/confirm">Confirm IDP routing</a>
+      <a href="{{ url_for('broker.confirm') }}">Confirm IDP routing</a>
     </li>
     <li>
-      <a href="/choose">Choose from a reduced list of IDPs</a>
+      <a href="{{ url_for('broker.choose') }}">Choose from a reduced list of IDPs</a>
     </li>
     <li>
-      <a href="/select">Find and select from complete list of IDPs</a>
+      <a href="{{ url_for('broker.select') }}">Find and select from complete list of IDPs</a>
     </li>
     <li>
-      <a href="/requestemail">Check if user knows their email</a>
+      <a href="{{ url_for('broker.request_email') }}">Check if user knows their email</a>
     </li>
     <li>
-      <a href="/emailsuggestion">IDP choice from email</a>
+      <a href="{{ url_for('broker.email_suggestion') }}">IDP choice from email</a>
     </li>
     <li>
-      <a href="/firsttime">Ask user if first time using broker</a>
+      <a href="{{ url_for('broker.first_time') }}">Ask user if first time using broker</a>
     </li>
   </ul>
 
