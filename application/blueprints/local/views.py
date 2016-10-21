@@ -7,4 +7,8 @@ local = Blueprint('local', __name__, url_prefix='/local')
 
 @local.route('/signin')
 def sign_in():
-  return render_template('notify_create_account.html')
+  return render_template('local_idp/signin.html')
+
+@local.route('/create')
+def create_account():
+  return render_template('local_idp/create_account.html')
