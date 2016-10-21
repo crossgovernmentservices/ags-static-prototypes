@@ -34,3 +34,6 @@ def email_suggestion():
 def forst_time():
   return render_template('firstvisit.html')
 
+@base.route('/product_page')
+def product_page():
+  return render_template('product_page.html')

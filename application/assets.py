@@ -26,8 +26,8 @@ libsass_output = LibSass(include_paths=[
 css_govuk = Bundle(
   'css/govuk.scss',
   filters=(libsass_output,),
-    output='gen/css/govuk_elements.css',
-    depends=[
+  output='gen/css/govuk_elements.css',
+  depends=[
         '/static/govuk_elements/public/sass/**/*.scss',
         '/static/govuk_frontend_toolkit/stylesheets/**/*.scss']
 )
