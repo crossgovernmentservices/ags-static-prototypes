@@ -5,7 +5,39 @@
 {% block content %}
 <main id="content" role="main">
 
+  <div class="confirm-banner">
+    <p><span class="tick-icon">&#10004;</span> You have been authenticated.</p>
+  </div>
+
   <h1 class="heading-xlarge">Create account</h1>
+
+  <p class="text">Now you have been authenticated confirm and provide us with some details to create an account.</p>
+
+  <section class="cya-section">
+    <h2 class="heading-medium">Account details</h2>
+
+    <dl class="definition-inline">
+      <dt>Name</dt>
+      <dd>Colm Britton</dd>
+      <dt>Email</dt>
+      <dd>colm.britton@digital.cabinet-office.gov.uk</dd>
+    </dl>
+
+    <p><a href="">How we got this information</a></p>
+  </section>
+
+  <section class="cya-section">
+    <h2 class="heading-medium">Contact details</h2>
+    <form action="" class="form">
+      <div class="form-group">
+        <label class="form-label" for="work-email">Phone number</label>
+        <input class="form-control" name="work-email" type="text" id="work-email">
+      </div>
+      <div class="form-group">
+        <button class="button">Continue</button>
+      </div>
+    </form>
+  </section>
 
 </main>
 {% endblock %}
