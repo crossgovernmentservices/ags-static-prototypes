@@ -5,7 +5,42 @@
 {% block content %}
 <main id="content" role="main">
 
-  <h1 class="heading-large">Create account</h1>
+  <a href="/" class="link-back">Back</a>
+
+  <h1 class="heading-large">Create account with your government email</h1>
+
+  <form action="" class="form">
+
+    <fieldset>
+
+      <legend class="visuallyhidden">Create account with your government email</legend>
+
+      <div class="form-group">
+        <label class="form-label" for="work-email">Email address
+          <span class="form-hint">You should use your departmental email</span>
+        </label>
+        <input class="form-control" name="work-email" type="text" id="work-email">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password-input">Password
+          <span class="form-hint">Password needs to be ...</span>
+        </label>
+        <input class="form-control" name="password-input" type="password" id="password-input">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password-retype">Reset password</label>
+        <input class="form-control" name="password-retype" type="password" id="password-retype">
+      </div>
+
+    </fieldset>
+
+    <div class="form-group">
+      <button class="button">Create account</button>
+    </div>
+
+  </form>
 
 </main>
 {% endblock %}
