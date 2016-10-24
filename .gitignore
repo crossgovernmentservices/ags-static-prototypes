@@ -16,6 +16,3 @@ pip-log.txt
 instance/
 .webassets-cache
 
-# GOVUK Assets
-application/templates/govuk_template
-application/static/govuk_*
