@@ -34,6 +34,10 @@
       <p class="text index-description">Users might make mistakes entering their email, try to mitigate against these. If email looks similar to other departments then suggest those.</p>
     </li>
     <li>
+      <a href="{{ url_for('broker.change_email') }}">User changes email address</a>
+      <p class="text index-description">Need to give user ability to re-enter email address incase they put an incorrect one in.</p>
+    </li>
+    <li>
       <a href="{{ url_for('broker.select') }}">Find and select from complete list of IDPs</a>
       <p class="text index-description">The route if we have no information to use to filter the list of IDPs automatically. Present full list to user.</p>
     </li>

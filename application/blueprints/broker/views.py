@@ -21,6 +21,10 @@ def select():
 def request_email():
   return render_template('knowyouremail.html')
 
+@broker.route('/email')
+def change_email():
+  return render_template('changeemail.html')
+
 @broker.route('/emailsuggestion')
 def email_suggestion():
   return render_template('emailsuggestion.html')
