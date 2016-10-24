@@ -48,6 +48,19 @@ information regarding the template.
 </div>
 {% endblock %}
 
+<!-- can remove banner by directly setting content block in template -->
+{% block content %}
+  <main id="content" role="main">
+    <div class="phase-banner-alpha">
+      <p>
+        <strong class="phase-tag">ALPHA</strong>
+        <span>You can help us improve this app by getting in touch and providing feedback.</span>
+      </p>
+    </div>
+    {% block main_content %}{% endblock %}
+  </main>
+{% endblock %}
+
 {% block body_end %}
 
   {# js scripts here #}
