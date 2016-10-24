@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Sample page - Flask prototyping{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <a href="/" class="link-back">Back</a>
+
+  <h1 class="heading-large text">Select your IDP</h1>
+
+  <p class="text"></p>
+
+  <h2 class="heading-medium">Your email</h2>
+  <div class="grid-row">
+    <div class="column-quarter">
+      <span>Email</span>
+    </div>
+    <div class="column-half">
+      <span>colm.britton@digital.cabinet-offic.gov.uk</span>
+    </div>
+    <div class="column-quarter ta-right">
+      <a href="">change</a>
+    </div>
+  </div>
+
+<section class="cya-section">
+
+  <div class="panel">
+    <p class="text">The email address you provided looks similar to <em>cabinet-office</em> email addresses. We've presented a list of departments based on that, please update if we've got that wrong.</p>
+  </div>
+
+  <h2 class="heading-medium">Do you work for one of these departments?</h2>
+
+  <form>
+    <div class="form-group">
+      <fieldset>
+
+        <legend class="visuallyhidden">Do you work for one of these departments?</legend>
+
+        <label class="block-label selection-button-radio" for="department-hmrc">
+          <input id="department-hmrc" type="radio" name="radio-know-email-group" value="Yes" aria-controls="know-email" aria-expanded="true">
+          CO
+        </label>
+
+        <label class="block-label selection-button-radio" for="department-moj">
+          <input id="department-moj" type="radio" name="radio-know-email-group" value="No" aria-controls="know-email" aria-expanded="false">
+          GDS
+        </label>
+
+        <label class="block-label selection-button-radio" for="department-mod">
+          <input id="department-mod" type="radio" name="radio-know-email-group" value="No" aria-controls="know-email" aria-expanded="false">
+          CCS
+        </label>
+
+        <label class="block-label selection-button-radio" for="none-of-the-above">
+          <input id="none-of-the-above" type="radio" name="radio-know-email-group" value="No" aria-controls="know-email" aria-expanded="false">
+          None of the above
+        </label>
+
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <button class="button">Confirm</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+{% endblock %}

@@ -52,9 +52,10 @@ html, body {
 .cya-section {
   border-top: 1px solid $border-colour;
   margin-top: $gutter;
+  padding-top: $gutter-half;
 
   .heading-medium {
-    margin-top: $gutter-half;
+    margin-top: 0;
   }
 }
 

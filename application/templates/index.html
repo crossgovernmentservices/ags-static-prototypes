@@ -27,7 +27,10 @@
       <a href="{{ url_for('broker.request_email') }}">Check if user knows their email</a>
     </li>
     <li>
-      <a href="{{ url_for('broker.email_suggestion') }}">IDP choice from email</a>
+      <a href="{{ url_for('broker.email_suggestion') }}">IDP choice based on email</a>
+    </li>
+    <li>
+      <a href="{{ url_for('broker.similar_email_suggestion') }}">IDP choice based on email being similar to another</a>
     </li>
     <li>
       <a href="{{ url_for('broker.first_time') }}">Ask user if first time using broker</a>

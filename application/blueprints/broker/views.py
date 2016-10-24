@@ -25,6 +25,10 @@ def request_email():
 def email_suggestion():
   return render_template('emailsuggestion.html')
 
+@broker.route('/similaremailsuggestion')
+def similar_email_suggestion():
+  return render_template('similaremail.html')
+
 @broker.route('/firsttime')
 def first_time():
   return render_template('firstvisit.html')
