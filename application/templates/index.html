@@ -16,24 +16,31 @@
   <ul class="list-bullet">
     <li>
       <a href="{{ url_for('broker.confirm') }}">Confirm IDP routing</a>
+      <p class="text index-description">We shouldn't automatically route the user to an IDP without getting them to confirm because we have no control if we send them to the wrong one. They might get stuck.</p>
     </li>
     <li>
       <a href="{{ url_for('broker.choose') }}">Choose from a reduced list of IDPs</a>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.select') }}">Find and select from complete list of IDPs</a>
+      <p class="text index-description">Similar to above but present a choice of IDPs the user could belong to.</p>
     </li>
     <li>
       <a href="{{ url_for('broker.request_email') }}">Check if user knows their email</a>
+      <p class="text index-description">We can use the email to filter the list of IDPs so see if they user knows theirs.</p>
     </li>
     <li>
       <a href="{{ url_for('broker.email_suggestion') }}">IDP choice based on email</a>
+      <p class="text index-description">Given the email provided above give users a choice of IDP/department.</p>
     </li>
     <li>
       <a href="{{ url_for('broker.similar_email_suggestion') }}">IDP choice based on email being similar to another</a>
+      <p class="text index-description">Users might make mistakes entering their email, try to mitigate against these. If email looks similar to other departments then suggest those.</p>
+    </li>
+    <li>
+      <a href="{{ url_for('broker.select') }}">Find and select from complete list of IDPs</a>
+      <p class="text index-description">The route if we have no information to use to filter the list of IDPs automatically. Present full list to user.</p>
     </li>
     <li>
       <a href="{{ url_for('broker.first_time') }}">Ask user if first time using broker</a>
+      <p class="text index-description">Optional: check to see if user has used the broker before. Similar approach to Verify. Depends on how visible we want the broker to be. Does the user need to know that much about it?</p>
     </li>
   </ul>
 
@@ -41,6 +48,7 @@
   <ul class="list-bullet">
     <li>
       <a href="{{ url_for('notify.register_account') }}">Create account</a>
+      <p class="text index-description">What the Notify create account page could look like once user is returned authenticated by the broker.</p>
     </li>
   </ul>
 
@@ -48,12 +56,15 @@
   <ul class="list-bullet">
     <li>
       <a href="{{ url_for('local.sign_in') }}">Sign in</a>
+      <p class="text index-description">Example sign in page for a GOV.UK styled IDP</p>
     </li>
     <li>
       <a href="{{ url_for('local.create_account') }}">Create account</a>
+      <p class="text index-description">Example create account page for a GOV.UK styled IDP</p>
     </li>
     <li>
       <a href="{{ url_for('base.product_page') }}">Product page</a>
+      <p class="text index-description">Product page for GOV Access, ready to be filled in</p>
     </li>
   </ul>
 
