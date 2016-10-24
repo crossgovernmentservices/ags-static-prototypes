@@ -5,7 +5,44 @@
 {% block content %}
 <main id="content" role="main">
 
-  <h1 class="heading-xlarge">Choose your IDP</h1>
+  <a href="/" class="link-back">Back</a>
+
+  <h1 class="heading-large text">Do you work for one of these departments?</h1>
+
+  <form>
+    <div class="form-group">
+      <fieldset>
+
+        <legend class="visuallyhidden">Do you work for one of these departments?</legend>
+
+        <label class="block-label selection-button-radio" for="department-hmrc">
+          <input id="department-hmrc" type="radio" name="radio-know-email-group" value="Yes" aria-controls="know-email" aria-expanded="true">
+          HMRC
+        </label>
+
+        <label class="block-label selection-button-radio" for="department-moj">
+          <input id="department-moj" type="radio" name="radio-know-email-group" value="No" aria-controls="know-email" aria-expanded="false">
+          MOJ
+        </label>
+
+        <label class="block-label selection-button-radio" for="department-mod">
+          <input id="department-mod" type="radio" name="radio-know-email-group" value="No" aria-controls="know-email" aria-expanded="false">
+          MOD
+        </label>
+
+        <label class="block-label selection-button-radio" for="none-of-the-above">
+          <input id="none-of-the-above" type="radio" name="radio-know-email-group" value="No" aria-controls="know-email" aria-expanded="false">
+          None of the above
+        </label>
+
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <button class="button">Confirm</button>
+    </div>
+
+  </form>
 
 </main>
 {% endblock %}
