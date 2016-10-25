@@ -156,3 +156,8 @@ html, body {
     margin: $gutter-third 0;
   }
 }
+
+.email-callout--warning {
+  @extend .email-callout;
+  background: lighten($focus-colour, 25%);
+}
