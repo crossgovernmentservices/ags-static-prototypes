@@ -9,7 +9,7 @@ A simple Python flask prototyping tool.
 To get some pages up and running quickly it make use of the 3 GOVUK frontend building blocks.
 
 * [govuk_template](https://github.com/alphagov/govuk_template) - template containing the GOV.UK header and footer, and associated assets
-* [govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit) - collection of Sass & JS 
+* [govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit) - collection of Sass & JS
 * [govuk_elements](https://github.com/alphagov/govuk_elements) - design guide and example (adds some Sass components)
 
 ### Setup
@@ -19,8 +19,9 @@ Requires you to have Ruby 2.2.0 or higher
 Running in a virtualenv is advised. To create one, with Python 3, run
 
 ```
-mkvirtualenv --python=/path/to/your/python3 <name>
+mkvirtualenv --python=`which python3` <name>
 ```
+(agsstatic might be a good name)
 
 When returning run `workon <name>` to activate the virtualenv you just created.
 
@@ -43,7 +44,7 @@ Then you should be ready to run it
 python manage.py runserver
 ```
 
-Follow the instructions to view it in the browser
+Follow the instructions returned on the commandline to view it in your browser
 
 
 ### Deploying to Heroku
@@ -61,5 +62,3 @@ And then let Heroku know we are using this. We do that by entering this on the c
 ```
 heroku buildpacks:set https://github.com/ddollar/heroku-buildpack-multi.git
 ```
-
-
