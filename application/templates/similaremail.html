@@ -2,33 +2,19 @@
 
 {% block page_title %}Sample page - Flask prototyping{% endblock %}
 
-{% block content %}
-<main id="content" role="main">
+{% block main_content %}
 
   <a href="/" class="link-back">Back</a>
 
-  <h1 class="heading-large text">Select your IDP</h1>
+  <h1 class="heading-large text">Select your department</h1>
 
-  <p class="text"></p>
-
-  <h2 class="heading-medium">Your email</h2>
-  <div class="grid-row">
-    <div class="column-quarter">
-      <span>Email</span>
-    </div>
-    <div class="column-half">
-      <span>colm.britton@digital.cabinet-offic.gov.uk</span>
-    </div>
-    <div class="column-quarter ta-right">
-      <a href="{{ url_for('broker.change_email') }}">change</a>
-    </div>
+  <div class="text email-callout--warning">
+    <p>Email address you provided</p>
+    <div class="email-given">colm.britton@digital.cabinet-offic.gov.uk</div>
+    <p><a href="">Update this email</a></p>
   </div>
 
-<section class="cya-section">
-
-  <div class="panel">
-    <p class="text">The email address you provided looks similar to <em>cabinet-office</em> email addresses. We've presented a list of departments based on that, please update if we've got that wrong.</p>
-  </div>
+  <p class="text">The email address you provided looks similar to <span class="bold">@digital.cabinet-office</span> email addresses. We've presented a list of departments based on that, please update if we've got that wrong.</p>
 
   <h2 class="heading-medium">Do you work for one of these departments?</h2>
 
@@ -53,20 +39,20 @@
           CCS
         </label>
 
+        <p class="form-block">or</p>
+
         <label class="block-label selection-button-radio" for="none-of-the-above">
           <input id="none-of-the-above" type="radio" name="radio-know-email-group" value="No" aria-controls="know-email" aria-expanded="false">
-          None of the above
+          I do not work for any of these departments
         </label>
 
       </fieldset>
     </div>
 
     <div class="form-group">
-      <button class="button">Confirm</button>
+      <button class="button">Continue</button>
     </div>
 
   </form>
-</section>
 
-</main>
 {% endblock %}

@@ -2,37 +2,27 @@
 
 {% block page_title %}Sample page - Flask prototyping{% endblock %}
 
-{% block content %}
-<main id="content" role="main">
+{% block main_content %}
 
   <a href="/" class="link-back">Back</a>
 
-  <h1 class="heading-large text">Select your IDP</h1>
+  <h1 class="heading-large text">Select the department you work for</h1>
 
-  <p class="text"></p>
-
-  <h2 class="heading-medium">Your email</h2>
-  <div class="grid-row">
-    <div class="column-quarter">
-      <span>Email</span>
-    </div>
-    <div class="column-half">
-      <span>colm.britton@digital.cabinet-office.gov.uk</span>
-    </div>
-    <div class="column-quarter ta-right">
-      <a href="{{ url_for('broker.change_email') }}">change</a>
-    </div>
+  <div class="text email-callout">
+    <p>Email address you provided</p>
+    <div class="email-given">colm.britton@digital.cabinet-office.gov.uk</div>
+    <p><a href="">Update this email</a></p>
   </div>
 
-<section class="cya-section">
+  <p class="text">Based on the email you have provided we have believe you work for one of the departments listed below. Please select the correct department.</p>
 
-  <h2 class="heading-medium">Do you work for one of these departments?</h2>
+  <h2 class="heading-medium">Which department do you work for?</h2>
 
   <form>
     <div class="form-group">
       <fieldset>
 
-        <legend class="visuallyhidden">Do you work for one of these departments?</legend>
+        <legend class="visuallyhidden">Which department do you work for?</legend>
 
         <label class="block-label selection-button-radio" for="department-hmrc">
           <input id="department-hmrc" type="radio" name="radio-know-email-group" value="Yes" aria-controls="know-email" aria-expanded="true">
@@ -49,6 +39,8 @@
           MOD
         </label>
 
+        <p class="form-block">or</p>
+
         <label class="block-label selection-button-radio" for="none-of-the-above">
           <input id="none-of-the-above" type="radio" name="radio-know-email-group" value="No" aria-controls="know-email" aria-expanded="false">
           None of the above
@@ -58,11 +50,9 @@
     </div>
 
     <div class="form-group">
-      <button class="button">Confirm</button>
+      <button class="button">Continue</button>
     </div>
 
   </form>
-</section>
 
-</main>
 {% endblock %}

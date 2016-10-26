@@ -5,6 +5,8 @@
 @import "patterns/product-page.scss";
 @import "patterns/search.scss";
 
+$gutter-third: $gutter / 3;
+
 html, body {
   color: $text-colour;
   padding: 0;
@@ -15,6 +17,10 @@ html, body {
   background-color: $page-colour;
   height: 100%;
   -webkit-text-size-adjust: none; /* Never autoresize text */
+}
+
+.column-three-quarters {
+  @include grid-column(2 / 3);
 }
 
 .confirm-banner {
@@ -109,4 +115,49 @@ html, body {
 .selection-help-text {
   font-size: 16px;
   margin: 0.25em 0;
+}
+
+.page-title {
+  margin: 60px 0 30px;
+}
+
+.authenticated-box {
+  background: $turquoise;
+  color: $page-colour;
+  padding: 25px $gutter 20px;
+  margin-bottom: $gutter;
+
+  .tick-icon {
+    text-align: center;
+    margin: auto;
+  }
+  h3 {
+    margin: 0;
+  }
+  .authenticated-details {
+    margin-top: 10px;
+  }
+}
+
+.email-callout {
+  border: 1px solid $border-colour;
+  background: lighten($light-blue, 42%);
+  border-radius: 4px;
+  padding: $gutter-half;
+  margin-bottom: 45px;
+
+  p {
+    margin: 0;
+  }
+
+  .email-given {
+    font-weight: bold;
+    font-size: 24px;
+    margin: $gutter-third 0;
+  }
+}
+
+.email-callout--warning {
+  @extend .email-callout;
+  background: lighten($focus-colour, 25%);
 }
