@@ -1,37 +1,52 @@
 [
   {
-    "department": "Home Office",
-    "short_name": "HO",
-    "blurb": "Including all Office 365 and Poise users"
-  },
-  {
     "department": "DWP",
     "short_name": "DWP",
-    "blurb": "Including all ..."
+    "blurb": "All DWP staff (including UC Digital)"
+  },
+  {
+    "department": "Home Office",
+    "short_name": "HO",
+    "blurb": "Office 365 users (including HMPO). Poise desktop choose 'none of the above'"
   },
   {
     "department": "Ministry of Justice",
     "short_name": "MOJ",
-    "blurb": "Including all HMCTS, HMPO and NOMS staff"
-  },
-  {
-    "department": "Government Digital Service",
-    "short_name": "GDS",
-    "blurb": "Including all those given @digital.cabinet-office.gov.uk emails"
+    "blurb": "Including all HMCTS, NOMS, LAA, HQ and Digital staff. Not ALBs"
   },
   {
     "department": "Cabinet Office",
     "short_name": "CO",
-    "blurb": "Those in the CO that have google apps accounts"
+    "blurb": "CO staff on the Official platform"
+  },
+  {
+    "department": "Government Digital Service",
+    "short_name": "GDS",
+    "blurb": "All @digital.cabinet-office.gov.uk accounts"
   },
   {
     "department": "HMRC",
     "short_name": "HMRC",
-    "blurb": "Including those with either main or digital google apps accounts"
+    "blurb": "Official-sensitive and official/digital accounts"
   },
   {
     "department": "BEIS",
     "short_name": "BEIS",
-    "blurb": "Include all staff from DECC and BIS"
+    "blurb": "Includes staff with DECC and BIS emails"
+  },
+  {
+    "department": "Transport",
+    "short_name": "Transport",
+    "blurb": "All DVLA, DVSA, DfT staff"
+  },
+  {
+    "department": "DIT",
+    "short_name": "DIT",
+    "blurb": "Only staff on Google or Office365. "
+  },
+  {
+    "department": "DCMS",
+    "short_name": "DCMS",
+    "blurb": "Staff using F5 or Google Apps."
   }
 ]
