@@ -7,17 +7,17 @@
   {
     "department": "Home Office",
     "short_name": "HO",
-    "blurb": "Office 365 users (including HMPO). Poise desktop choose 'none of the above'"
+    "blurb": "Office 365 and Keycloak users (including HMPO). Poise desktop choose 'none of the above'"
   },
   {
     "department": "Ministry of Justice",
     "short_name": "MOJ",
-    "blurb": "Including all HMCTS, NOMS, LAA, HQ and Digital staff. Not ALBs"
+    "blurb": "All staff using Google, Office365 or MOJ-SSO accounts to sign into Digital services. Otherwise choose 'none of the above'"
   },
   {
     "department": "Cabinet Office",
     "short_name": "CO",
-    "blurb": "CO staff on the Official platform"
+    "blurb": "CO staff on the Official platform. @cabinet-office.gov.uk accounts only."
   },
   {
     "department": "Government Digital Service",
@@ -27,7 +27,7 @@
   {
     "department": "HMRC",
     "short_name": "HMRC",
-    "blurb": "Official-sensitive and official/digital accounts"
+    "blurb": "@hmrc.gov.uk and @digital.hmrc.gov.uk accounts"
   },
   {
     "department": "BEIS",
