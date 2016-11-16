@@ -12,3 +12,7 @@ def register_account():
 @notify.route('/productpage')
 def product_page():
   return render_template('notify/product_page.html')
+
+@notify.route('/prebroker')
+def pre_broker():
+  return render_template('notify/pre_broker.html')
