@@ -16,3 +16,7 @@ def product_page():
 @notify.route('/prebroker')
 def pre_broker():
   return render_template('notify/pre_broker.html')
+
+@notify.route('/post-signout')
+def post_sign_out():
+  return render_template('notify/post_sign_out.html')
