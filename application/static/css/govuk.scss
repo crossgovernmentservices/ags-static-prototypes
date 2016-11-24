@@ -181,3 +181,11 @@ html, body {
   float: right;
   padding: 0 0 0 15px;
 }
+
+.sub-selection-input {
+  display: none;
+}
+
+.selected + .sub-selection-input {
+  display: block;
+}
