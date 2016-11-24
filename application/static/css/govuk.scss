@@ -19,6 +19,10 @@ html, body {
   -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
+.govuk-notify #global-header-bar {
+  background-color: $yellow;
+}
+
 .column-three-quarters {
   @include grid-column(2 / 3);
 }
