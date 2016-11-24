@@ -11,7 +11,7 @@
     Do you know your work email?
   </h1>
 
-  <form>
+  <form class="email-form">
     <div class="form-group">
       <fieldset>
 
@@ -39,4 +39,26 @@
   </form>
 
 </main>
+{% endblock %}
+
+{% block body_end %}
+  {{ super() }}
+  <script>
+  ;(function ($, window) {
+    "use strict"
+
+    $(function() {
+      $(".email-form button").on("click", function(e) {
+        var selection = $(".email-form input[name=radio-know-email-group]:checked").val() || "Yes";
+        e.preventDefault();
+        if( selection === "No" ) {
+          window.location.href = "{{ url_for('local.create_account') }}";
+        } else {
+          window.location.href = "{{ url_for('broker.confirm') }}";
+        }
+      });
+    });
+
+  }).call(this, jQuery, window);
+  </script>
 {% endblock %}
