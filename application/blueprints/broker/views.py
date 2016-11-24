@@ -3,6 +3,8 @@ from flask import (
   Blueprint,
   current_app)
 
+import json
+
 broker = Blueprint('broker', __name__, url_prefix='/broker')
 
 @broker.route('/confirm')
@@ -51,3 +53,12 @@ def handto_service():
 @broker.route('/fake-broker')
 def fake_broker():
   return render_template('fake_broker.html')
+
+# -------------
+# MVP Versions
+# -------------
+@broker.route('/mvp/select-idp')
+def mvp_select_idp():
+  with open('application/data/idps.json') as data_file:
+      idps = json.load( data_file )
+  return render_template('mvp_selectidps.html', idps=idps)
