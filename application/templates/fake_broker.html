@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="{{ html_lang|default('en') }}"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="{{ html_lang|default('en') }}"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <title>BROKER</title>
+  </head>
+  <body>
+    <h1>This is a broker</h1>
+    <h2>The user is logging in now</h2>
+
+    <script>
+      var redirect_url = "{{ url_for('broker.handto_service') }}";
+      window.setTimeout(function(){
+
+        // Move to a new location or you can do something else
+        window.location.href = redirect_url;
+
+      }, 3000);
+    </script>
+  </body>
+</html>

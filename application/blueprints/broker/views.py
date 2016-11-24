@@ -36,3 +36,18 @@ def similar_email_suggestion():
 @broker.route('/firsttime')
 def first_time():
   return render_template('firstvisit.html')
+
+# -------------
+# Hand off pages
+# -------------
+@broker.route('/handtoidp')
+def handto_idp():
+  return render_template('to_idp.html')
+
+@broker.route('/handtoservice')
+def handto_service():
+  return render_template('to_service.html')
+
+@broker.route('/fake-broker')
+def fake_broker():
+  return render_template('fake_broker.html')
