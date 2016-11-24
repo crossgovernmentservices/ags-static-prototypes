@@ -52,7 +52,7 @@
         var selection = $(".email-form input[name=radio-know-email-group]:checked").val() || "Yes";
         e.preventDefault();
         if( selection === "No" ) {
-          window.location.href = "{{ url_for('local.create_account') }}";
+          window.location.href = "{{ url_for('broker.mvp_select_idp') }}";
         } else {
           window.location.href = "{{ url_for('broker.confirm') }}";
         }
