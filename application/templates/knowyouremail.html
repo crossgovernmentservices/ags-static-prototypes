@@ -72,7 +72,7 @@
         if( selection === "No" ) {
           window.location.href = "{{ url_for('broker.mvp_select_idp') }}";
         } else {
-          window.location.href = "{{ url_for('broker.confirm') }}";
+          window.location.href = "{{ url_for('broker.mvp_email_confirm_dept') }}";
         }
       });
     });
