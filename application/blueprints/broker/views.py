@@ -62,3 +62,7 @@ def mvp_select_idp():
   with open('application/data/idps.json') as data_file:
       idps = json.load( data_file )
   return render_template('mvp_selectidps.html', idps=idps)
+
+@broker.route('/mvp/email-confirm-dept')
+def mvp_email_confirm_dept():
+  return render_template('mvp_confirm.html')

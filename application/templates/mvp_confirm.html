@@ -1,0 +1,64 @@
+{% set global_header_text = "GOV.UK Access" %}
+{% extends "layout.html" %}
+
+{% block page_title %}Sample page - Flask prototyping{% endblock %}
+
+{% block main_content %}
+<main id="content" role="main">
+
+  <a href="/" class="link-back">Back</a>
+
+  <h1 class="heading-large">
+    Confirm the department you work for
+  </h1>
+
+  <div class="text email-callout">
+    <p>Email address you provided</p>
+    <div class="email-given">colm.britton@digital.cabinet-office.gov.uk</div>
+    <p><a href="">Update this email</a></p>
+  </div>
+
+  <h2 class="heading-medium">Do you work for the Cabinet Office?</h2>
+
+  <form>
+    <div class="form-group">
+      <fieldset>
+
+        <legend class="visuallyhidden">Do you work for the Cabinet Office?</legend>
+
+        <label class="block-label selection-button-radio" for="know-email-yes">
+          <input id="know-email-yes" type="radio" name="radio-know-email-group" value="Yes" aria-controls="know-email" aria-expanded="true">
+          Yes
+        </label>
+
+        <label class="block-label selection-button-radio" for="know-email-no">
+          <input id="know-email-no" type="radio" name="radio-know-email-group" value="No" aria-controls="know-email" aria-expanded="false">
+          No
+        </label>
+
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <details class="text" role="group">
+        <summary role="button" aria-controls="details-content-0" aria-expanded="true"><span class="summary">Why do we think that?</span></summary>
+        <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="false">
+          <p>
+            If you’re not from this department it might be useful to understand why we thought you were.
+          </p>
+          <p>
+            We have the following info about you so...
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <div class="form-group">
+      <a href="{{ url_for('broker.handto_idp') }}" class="button">Confirm</a>
+    </div>
+  </form>
+
+  <p>*IS THIS PAGE NECESSARY ONCE USER HAS PROVIDED EMAIL????</p>
+
+</main>
+{% endblock %}
