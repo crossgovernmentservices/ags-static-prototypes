@@ -50,9 +50,21 @@ def handto_idp():
 def handto_service():
   return render_template('to_service.html')
 
-@broker.route('/fake-broker')
-def fake_broker():
+@broker.route('/google-email')
+def google_email():
   return render_template('fake_broker.html')
+
+@broker.route('/google-password')
+def google_password():
+  return render_template('google/google_password.html')
+
+@broker.route('/google-2fa')
+def google_2fa():
+  return render_template('google/google_2fa.html')
+
+@broker.route('/google-permissions')
+def google_permissions():
+  return render_template('google/google_permissions.html')
 
 # -------------
 # MVP Versions

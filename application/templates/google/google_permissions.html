@@ -6,19 +6,16 @@
     <title>BROKER</title>
   </head>
   <body>
-    <img class="fake-broker-step" src="/static/images/google/google_sign_in_email_screenshot.png" alt="" />
+    <img class="fake-broker-step" src="/static/images/google/google_sign_in_permissions_screenshot.png" alt="" />
 
     <script src="/static/govuk_elements/public/javascripts/vendor/jquery-1.11.0.min.js"></script>
     <script>
-    ;(function ($, window) {
-      "use strict"
-      var redirect_url = "{{ url_for('broker.google_password') }}";
+      var redirect_url = "{{ url_for('broker.handto_service') }}";
       $(function() {
         $(".fake-broker-step").on("click", function(){
           window.location.href = redirect_url;
         });
       });
-    }).call(this, jQuery, window);
     </script>
   </body>
 </html>
