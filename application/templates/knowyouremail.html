@@ -1,27 +1,30 @@
+{% set global_header_text = "GOV.UK Access" %}
 {% extends "layout.html" %}
 
 {% block page_title %}Sample page - Flask prototyping{% endblock %}
 
-{% block content %}
+{% block main_content %}
 <main id="content" role="main">
 
   <a href="/" class="link-back">Back</a>
 
-  <h1 class="heading-medium">
+  <h1 class="heading-large">
     Do you know your work email?
   </h1>
 
-  <form>
+  <p class="text">Please provide your work email address. We'll use this to authenticate you for your GOV services.</p>
+
+  <form class="email-form">
     <div class="form-group">
       <fieldset>
 
         <legend class="visuallyhidden">Do you know your work email?</legend>
 
-        <label class="block-label selection-button-radio selected" for="know-email-yes">
+        <label class="block-label selection-button-radio" for="know-email-yes">
           <input id="know-email-yes" type="radio" name="radio-know-email-group" value="Yes" aria-controls="know-email" aria-expanded="true">
           Yes
         </label>
-        <div class="panel panel-border-narrow" id="know-email" aria-hidden="false">
+        <div class="panel panel-border-narrow sub-selection-input" id="know-email" aria-hidden="false">
           <label class="form-label" for="work-email">Email address</label>
           <input class="form-control" name="work-email" type="text" id="work-email">
         </div>
@@ -33,10 +36,47 @@
 
       </fieldset>
     </div>
+
     <div class="form-group">
-      <button class="button">Confirm</button>
+      <details class="text" role="group">
+        <summary role="button" aria-controls="details-content-0" aria-expanded="true"><span class="summary">What will we use your email address for?</span></summary>
+        <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="false">
+          <p>
+            We use it to authenticate......
+          </p>
+          <p>
+            It allows us to...
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <div class="form-group">
+      <button class="button">Continue</button>
     </div>
   </form>
 
 </main>
+{% endblock %}
+
+{% block body_end %}
+  {{ super() }}
+  <script>
+  ;(function ($, window) {
+    "use strict"
+
+    $(function() {
+      $(".email-form button").on("click", function(e) {
+        var selection = $(".email-form input[name=radio-know-email-group]:checked").val() || "Yes";
+        e.preventDefault();
+        if( selection === "No" ) {
+          window.location.href = "{{ url_for('broker.mvp_select_idp') }}";
+        } else {
+          window.location.href = "{{ url_for('broker.mvp_email_confirm_dept') }}";
+        }
+      });
+    });
+
+  }).call(this, jQuery, window);
+  </script>
 {% endblock %}

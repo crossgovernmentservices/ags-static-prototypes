@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="{{ html_lang|default('en') }}"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="{{ html_lang|default('en') }}"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <title>BROKER</title>
+  </head>
+  <body>
+    <img class="fake-broker-step" src="/static/images/google/google_sign_in_2fa_screenshot.png" alt="" />
+
+    <script src="/static/govuk_elements/public/javascripts/vendor/jquery-1.11.0.min.js"></script>
+    <script>
+      var redirect_url = "{{ url_for('broker.google_permissions') }}";
+      $(function() {
+        $(".fake-broker-step").on("click", function(){
+          window.location.href = redirect_url;
+        });
+      });
+    </script>
+  </body>
+</html>

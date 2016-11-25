@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Sample page - Flask prototyping{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <a href="/" class="link-back">Back</a>
+
+  <h1 class="heading-large text">We are now redirecting you to sign in to your work email</h1>
+
+  <img src="/static/images/ring.gif" alt="" />
+
+</main>
+{% endblock %}
+
+{% block body_end %}
+<script>
+  var redirect_url = "{{ url_for('broker.google_email') }}";
+  window.setTimeout(function(){
+
+    // Move to a new location or you can do something else
+    window.location.href = redirect_url;
+
+  }, 3000);
+</script>
+{% endblock %}

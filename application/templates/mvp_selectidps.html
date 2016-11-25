@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Sample page - Flask prototyping{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <a href="/" class="link-back">Back</a>
+
+  <h1 class="heading-xlarge">Select IDP</h1>
+
+  <form class="form">
+    <label for="" class="form-label">Search for your department</label>
+    <div class="main-search idp-search">
+      <input type="text" class="search__input" id="person-search" placeholder="enter department name here" />
+      <input class="search__submit" type="submit" value="Search" />
+    </div>
+  </form>
+
+  <h2 class="heading-large">Which department do you work for?</h2>
+
+  <form>
+    <fieldset class="form-group">
+
+      <legend class="visuallyhidden">Which department or agency do you work for?</legend>
+
+      {% for idp in idps %}
+        <label class="block-label selection-button-radio" for="department-{{ idp.short_name }}">
+          <input id="department-{{ idp.short_name }}" type="radio" name="radio-know-email-group" value="Yes" aria-controls="know-email" aria-expanded="true">
+          <span class="selection-heading">{{ idp.department }}</span>
+          <p class="selection-help-text text">{{ idp.blurb }}</p>
+        </label>
+      {% endfor %}
+
+      <p class="form-block">or</p>
+
+      <label class="block-label selection-button-radio" for="none-of-the-above">
+        <input id="none-of-the-above" type="radio" name="radio-know-email-group" value="No" aria-controls="know-email" aria-expanded="false">
+        None of the above
+      </label>
+
+    </fieldset>
+
+    <p class="panel text">If you are already signed in to your email account you will not be prompted to enter your details again.</p>
+
+    <div class="form-group">
+      <a href="{{ url_for('broker.handto_idp') }}" class="button">Continue</a>
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}
