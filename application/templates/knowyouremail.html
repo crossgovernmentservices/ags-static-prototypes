@@ -1,15 +1,18 @@
+{% set global_header_text = "GOV.UK Access" %}
 {% extends "layout.html" %}
 
 {% block page_title %}Sample page - Flask prototyping{% endblock %}
 
-{% block content %}
+{% block main_content %}
 <main id="content" role="main">
 
   <a href="/" class="link-back">Back</a>
 
-  <h1 class="heading-medium">
+  <h1 class="heading-large">
     Do you know your work email?
   </h1>
+
+  <p class="text">Please provide your work email address. We'll use this to authenticate you for your GOV services.</p>
 
   <form class="email-form">
     <div class="form-group">
@@ -33,8 +36,23 @@
 
       </fieldset>
     </div>
+
     <div class="form-group">
-      <button class="button">Confirm</button>
+      <details class="text" role="group">
+        <summary role="button" aria-controls="details-content-0" aria-expanded="true"><span class="summary">What will we use your email address for?</span></summary>
+        <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="false">
+          <p>
+            We use it to authenticate......
+          </p>
+          <p>
+            It allows us to...
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <div class="form-group">
+      <button class="button">Continue</button>
     </div>
   </form>
 
