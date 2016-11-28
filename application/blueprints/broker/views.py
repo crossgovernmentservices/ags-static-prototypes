@@ -78,3 +78,7 @@ def mvp_select_idp():
 @broker.route('/mvp/email-confirm-dept')
 def mvp_email_confirm_dept():
   return render_template('mvp_confirm.html')
+
+@broker.route('/mvp/sign-out')
+def mvp_sign_out():
+  return render_template('mvp_sign_out.html')
