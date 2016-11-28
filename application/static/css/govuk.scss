@@ -143,7 +143,7 @@ html, body {
   }
 }
 
-.email-callout {
+%info-callout {
   border: 1px solid $border-colour;
   background: lighten($light-blue, 42%);
   border-radius: 4px;
@@ -161,8 +161,12 @@ html, body {
   }
 }
 
+.email-callout {
+  @extend %info-callout;
+}
+
 .email-callout--warning {
-  @extend .email-callout;
+  @extend %info-callout;
   background: lighten($focus-colour, 25%);
 }
 
