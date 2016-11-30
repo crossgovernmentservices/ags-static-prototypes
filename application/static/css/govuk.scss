@@ -193,3 +193,19 @@ html, body {
 .selected + .sub-selection-input {
   display: block;
 }
+
+// -------
+// tweaks to make notice work how we want
+// -------
+.icon-important {
+  background-image: url(/static/govuk_frontend_toolkit/images/icon-important.png);
+}
+
+.notice {
+  margin-top: $gutter;
+  p {
+    display: block;
+    padding-left: (35 + 30) + px;
+    margin-left: -$gutter-half;
+  }
+}
