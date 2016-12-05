@@ -1,7 +1,8 @@
 from flask import (
   render_template,
   Blueprint,
-  current_app)
+  current_app,
+  url_for)
 
 import json
 
@@ -65,6 +66,15 @@ def google_2fa():
 @broker.route('/google-permissions')
 def google_permissions():
   return render_template('google/google_permissions.html')
+
+# -------------
+# Azure screenshots
+# -------------
+@broker.route('/azure/email')
+def azure_email():
+  return render_template('screenshot_layout.html',
+          onclick_url=url_for('base.index'),
+          screenshot_url="azure/azure_email_page.png");
 
 # -------------
 # MVP Versions
