@@ -21,20 +21,17 @@
 
   </div>
 
-  <h1 class="heading-large text"></h1>
-
-
 </main>
 {% endblock %}
 
 {% block body_end %}
 <script>
   var redirect_url = "{{ url_for('broker.google_email') }}";
-  //window.setTimeout(function(){
+  window.setTimeout(function(){
 
     // Move to a new location or you can do something else
-    //window.location.href = redirect_url;
+    window.location.href = redirect_url;
 
-  //}, 3000);
+  }, 4000);
 </script>
 {% endblock %}
