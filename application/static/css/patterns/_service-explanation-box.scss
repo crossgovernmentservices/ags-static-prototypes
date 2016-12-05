@@ -8,9 +8,17 @@
   box-sizing: border-box;
   color: $page-colour;
   width: 100%;
-  padding: 75px 70px;
+  padding: 60px 70px;
 
   .panel {
     border-color: $page-colour;
   }
+}
+
+.single-image {
+  text-align: center;
+}
+
+.panel-content {
+  padding-top: $gutter-half;
 }
