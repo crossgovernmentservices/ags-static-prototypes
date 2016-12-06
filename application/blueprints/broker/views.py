@@ -1,7 +1,8 @@
 from flask import (
   render_template,
   Blueprint,
-  current_app)
+  current_app,
+  url_for)
 
 import json
 
@@ -65,6 +66,36 @@ def google_2fa():
 @broker.route('/google-permissions')
 def google_permissions():
   return render_template('google/google_permissions.html')
+
+# -------------
+# Azure flow / screenshots
+# -------------
+@broker.route('/azure/requestemail')
+def azure_request_email():
+  return render_template('knowyouremail.html',
+          next_url=url_for('broker.azure_email_confirm'))
+
+@broker.route('/azure/email-confirm-dept')
+def azure_email_confirm():
+  return render_template('mvp_confirm.html',
+          next_url=url_for('broker.azure_handto_idp'))
+
+@broker.route('/azure/handtoidp')
+def azure_handto_idp():
+  return render_template('to_idp.html',
+          next_url=url_for('broker.azure_email'))
+
+@broker.route('/azure/email')
+def azure_email():
+  return render_template('screenshot_layout.html',
+          onclick_url=url_for('broker.azure_2_step'),
+          screenshot_url="azure/azure_email_page.png")
+
+@broker.route('/azure/2step')
+def azure_2_step():
+  return render_template('screenshot_layout.html',
+          onclick_url=url_for('broker.handto_service'),
+          screenshot_url="azure/azure_2_step.png")
 
 # -------------
 # MVP Versions
