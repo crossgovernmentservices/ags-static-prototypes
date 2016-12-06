@@ -54,7 +54,7 @@
     </div>
 
     <div class="form-group">
-      <a href="{{ url_for('broker.handto_idp') }}" class="button">Confirm</a>
+      <a href="{{ next_url|default(url_for('broker.handto_idp')) }}" class="button">Confirm</a>
     </div>
   </form>
 

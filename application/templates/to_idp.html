@@ -26,7 +26,7 @@
 
 {% block body_end %}
 <script>
-  var redirect_url = "{{ url_for('broker.google_email') }}";
+  var redirect_url = "{{ next_url|default(url_for('broker.google_email')) }}";
   window.setTimeout(function(){
 
     // Move to a new location or you can do something else
