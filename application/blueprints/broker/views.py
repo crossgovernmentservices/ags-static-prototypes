@@ -73,8 +73,14 @@ def google_permissions():
 @broker.route('/azure/email')
 def azure_email():
   return render_template('screenshot_layout.html',
-          onclick_url=url_for('base.index'),
+          onclick_url=url_for('broker.azure_2_step'),
           screenshot_url="azure/azure_email_page.png");
+
+@broker.route('/azure/2step')
+def azure_2_step():
+  return render_template('screenshot_layout.html',
+          onclick_url=url_for('base.index'),
+          screenshot_url="azure/azure_2_step.png");
 
 # -------------
 # MVP Versions
