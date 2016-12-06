@@ -79,7 +79,7 @@ def azure_email():
 @broker.route('/azure/2step')
 def azure_2_step():
   return render_template('screenshot_layout.html',
-          onclick_url=url_for('base.index'),
+          onclick_url=url_for('broker.handto_service'),
           screenshot_url="azure/azure_2_step.png");
 
 # -------------
