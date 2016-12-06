@@ -110,6 +110,10 @@ def mvp_select_idp():
 def mvp_email_confirm_dept():
   return render_template('mvp_confirm.html')
 
+@broker.route('/mvp/confirm-auto-routing')
+def mvp_auto_routing():
+  return render_template('mvp_confirm.html', flow='signbackin')
+
 @broker.route('/mvp/sign-out')
 def mvp_sign_out():
   return render_template('mvp_sign_out.html')

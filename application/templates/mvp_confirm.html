@@ -13,9 +13,16 @@
   </h1>
 
   <div class="text email-callout">
-    <p>Email address you provided</p>
+    <p>Email address you provided {% if flow == "signbackin" %}last time{% endif %}</p>
     <div class="email-given">colm.britton@digital.cabinet-office.gov.uk</div>
-    <p><a href="">Update this email</a></p>
+    <p>
+      {% if flow == "signbackin" %}
+      <a href="{{ url_for('broker.request_email') }}">Not you?</a>
+      {% else %}
+      <a href="{{ url_for('broker.request_email') }}">Change email</a>
+      {% endif %}
+    </p>
+      
   </div>
 
   <h2 class="heading-medium">Do you work for the Cabinet Office?</h2>
@@ -39,6 +46,7 @@
       </fieldset>
     </div>
 
+    {% if flow == "signbackin" %}
     <div class="form-group">
       <details class="text" role="group">
         <summary role="button" aria-controls="details-content-0" aria-expanded="true"><span class="summary">Why do we think that?</span></summary>
@@ -52,6 +60,7 @@
         </div>
       </details>
     </div>
+    {% endif %}
 
     <div class="form-group">
       <a href="{{ next_url|default(url_for('broker.handto_idp')) }}" class="button">Confirm</a>
