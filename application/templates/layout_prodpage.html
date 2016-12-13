@@ -38,6 +38,10 @@ information regarding the template.
 
 {% block body_classes %}govuk-notify{% endblock %}
 
+{% block inside_header %}
+<!--<strong class="beta-badge">Beta</strong>-->
+{% endblock %}
+
 <!-- example of how you add propositional heading -->
 {% block header_class %}with-proposition{% endblock %}
 {% block proposition_header %}
@@ -46,9 +50,7 @@ information regarding the template.
     <nav id='proposition-menu'>
       <ul id="proposition-links" class="right-aligned">
         <li><a href="#">Sign in</a></li>
-        <li><a href="https://gds-payments.gelato.io/">Documentation</a></li>
-        <li><a href="https://pay-staff-tool-2.herokuapp.com/create-account">Get started</a></li>
-        <li><a href="#" class="active">About</a></li>
+        <li><a href="https://gds-payments.gelato.io/">Support and feedback</a></li>
       </ul>
     </nav>
   </div>

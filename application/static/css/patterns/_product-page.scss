@@ -40,3 +40,117 @@
   margin-top: $gutter;
   font-size: 16px;
 }
+
+// --------------
+// New updated version
+// --------------
+.product-page-intro {
+  margin: -10px 0 45px 0;
+  padding: 60px 0 60px 0;
+  background: #005ea5;
+  color: #fff;
+
+  h1 {
+    margin: 0 0 30px;
+    font-weight: 700;
+
+    @include media(tablet) {
+      font-size: 48px;
+      line-height: (50 / 48);
+    }
+  }
+
+  .button-container {
+    line-height: 45px;
+  }
+
+  .button {
+    background: #fff;
+    margin-right: 15px;
+    padding: 0.3em 0.6em 0.2em 0.6em;
+  }
+
+  a:link,
+  a:visited,
+  a:hover {
+    color: #fff;
+  }
+
+  .button:link,
+  .button:visited,
+  .button:hover {
+    color: #005ea5;
+  }
+}
+.product-page-intro-wrapper,
+.product-page-section,
+#footer .footer-categories {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#footer .footer-categories {
+  h2 {
+    margin: 0 0 20px;
+  }
+  a {
+    font-size: 16px;
+  }
+}
+
+.product-page-intro-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  background-image: url(/static/images/proposition-illustration.png);
+  background-size: 320px;
+  background-repeat: no-repeat;
+  background-position: right -14px top -10px;
+}
+
+.product-page-section {
+  margin-bottom: 15px;
+
+  .with-keyline {
+    border-top: 1px solid #bfc1c3;
+    padding: 45px 0 0 0;
+  }
+
+  h2 {
+    margin: 0 0 30px;
+    font-weight: 700;
+    @include media(tablet) {
+      font-size: 36px;
+      line-height: 1.11111;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0 0 45px 0;
+  }
+}
+
+#global-header #logo #product-name {
+  font-size: 24px;
+  font-weight: 400;
+  padding-left: 5px;
+}
+
+.beta-badge {
+  display: inline-block;
+  padding: 2px 5px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+  background: #005ea5;
+  margin: 10px 0 0 0;
+
+  @include media(tablet) {
+    vertical-align: baseline;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+

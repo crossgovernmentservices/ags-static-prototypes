@@ -1,0 +1,129 @@
+{% set global_product_name = "Notify" %}
+{% extends "layout_prodpage.html" %}
+
+{% block page_title %}Sample page - Flask prototyping{% endblock %}
+
+{% block content %}
+
+<main role="main">
+<header class="product-page-intro">
+  <div class="product-page-intro-wrapper">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1>Send emails and text messages to your users</h1>
+
+        <p class="lede"> 
+          Try GOV.UK Notify now if you work for a UK government
+          department or agency.
+        </p>
+
+        <div class="button-container">
+          <a class="button button-start" href="{{ next_url|default(url_for('notify.pre_broker')) }}" role="button">Create an account</a>
+
+          or <a href="https://www.notifications.service.gov.uk/sign-in"> sign in</a> if you've used it before
+        </div>
+
+      </div>
+      
+    </div>
+
+  </div>
+</header>
+
+  <div class="product-page-section">
+    <div class="grid-row">
+      <div class="column-half">
+        <h2>Control your content</h2>
+        <p>You don’t need any technical knowledge to create email and text message templates.</p>
+      </div>
+      <div class="column-half">
+        <img src="/static/images/notify-templates.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="product-page-section">
+    <div class="grid-row">
+      <div class="column-half">
+        <h2>See how your messages perform</h2>
+        <p>Track how many messages you’ve sent and find out which ones aren’t getting delivered.</p>
+      </div>
+      <div class="column-half">
+        <img src="/static/images/notify-reporting.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="product-page-section">
+    <h2 class="with-keyline">Send messages manually or automatically</h2>
+    <div class="grid-row">
+      <div class="column-half">
+        <p>Upload a spreadsheet of email addresses or phone numbers and Notify sends the messages.</p>
+        <img src="/static/images/notify-spreadsheet.svg" alt="" />
+      </div>
+      <div class="column-half">
+        <p>Integrate the GOV.UK Notify API with your web&nbsp; application or back office system.</p>
+        <img src="/static/images/notify-api.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="product-page-section bottom-gutter-2">
+    <div class="grid-row">
+      <div class="column-half">
+        <h2 class="with-keyline">
+          The team
+        </h2>
+        <p>
+          GOV.UK Notify is built by the Government Digital Service and is supported 24 hours a day, 7 days a week.
+        </p>
+        <p>
+          <a href="/contact">Contact the team</a> if you have a question or want to give feedback.
+        </p>
+      </div>
+      <div class="column-half">
+        <img src="/static/images/notify-team.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+
+</main>
+{% endblock %}
+
+{% block footer_top %}
+<div class="footer-categories">
+  <div class="footer-categories-wrapper">
+    <div class="grid-row">
+      <div class="column-third">
+        <h2>Support</h2>
+        <ul>
+          <li><a href="https://status.notifications.service.gov.uk">System status</a></li>
+          <li><a href="/feedback">Support and feedback</a></li>
+          <li><a href="https://ukgovernmentdigital.slack.com/messages/govuk-notify">Chat with the Notify team</a></li>
+        </ul>
+      </div>
+      <div class="column-third">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/terms">Terms of use</a></li>
+          <li><a href="/trial-mode">Trial mode</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/delivery-and-failure">Delivery and failure</a></li>
+        </ul>
+      </div>
+      <div class="column-third">
+        <h2>API Documentation</h2>
+        <ul>
+          <li><a href="https://github.com/alphagov/notifications-java-client" target="_blank" rel="noopener noreferrer">Java client</a></li>
+          <li><a href="https://github.com/alphagov/notifications-node-client" target="_blank" rel="noopener noreferrer">Node JS client</a></li>
+          <li><a href="https://github.com/alphagov/notifications-php-client" target="_blank" rel="noopener noreferrer">PHP client</a></li>
+          <li><a href="https://github.com/alphagov/notifications-python-client" target="_blank" rel="noopener noreferrer">Python client</a></li>
+          <li><a href="https://github.com/alphagov/notifications-ruby-client" target="_blank" rel="noopener noreferrer">Ruby client</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
