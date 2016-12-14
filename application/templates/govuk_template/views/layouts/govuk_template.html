@@ -53,7 +53,7 @@
           <div class="header-logo">
             <a href="{{ homepage_url|default('https://www.gov.uk') }}" title="{{ logo_link_title|default('Go to the GOV.UK homepage') }}" id="logo" class="content">
               <img src="{{ asset_path }}images/gov.uk_logotype_crown_invert_trans.png?0.18.3" width="36" height="32" alt=""> {{ global_header_text|default('GOV.UK') }}
-              <span id="product-name">{{ global_product_name|default('') }}</span>
+              {% if global_product_name is defined %}<span id="product-name">{{ global_product_name|default('') }}</span>{% endif %}
             </a>
           </div>
           {% block inside_header %}{% endblock %}

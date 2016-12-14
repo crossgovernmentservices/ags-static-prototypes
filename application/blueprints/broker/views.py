@@ -98,6 +98,42 @@ def azure_2_step():
           screenshot_url="azure/azure_2_step.png")
 
 # -------------
+# Okta flow / screenshots
+# -------------
+@broker.route('/okta/requestemail')
+def okta_request_email():
+  return render_template('knowyouremail.html',
+          next_url=url_for('broker.okta_email_confirm'))
+
+@broker.route('/okta/email-confirm-dept')
+def okta_email_confirm():
+  return render_template('mvp_confirm.html',
+          next_url=url_for('broker.okta_handto_idp'))
+
+@broker.route('/okta/handtoidp')
+def okta_handto_idp():
+  return render_template('to_idp.html',
+          next_url=url_for('broker.okta_email'))
+
+@broker.route('/okta/email')
+def okta_email():
+  return render_template('screenshot_layout.html',
+          onclick_url=url_for('broker.okta_first_time'),
+          screenshot_url="okta/okta_email.png")
+
+@broker.route('/okta/firsttime')
+def okta_first_time():
+  return render_template('screenshot_layout.html',
+          onclick_url=url_for('broker.okta_2_step'),
+          screenshot_url="okta/okta_first_time.png")
+
+@broker.route('/okta/okta2fa')
+def okta_2_step():
+  return render_template('screenshot_layout.html',
+          onclick_url=url_for('broker.handto_service'),
+          screenshot_url="okta/okta_2fa.png")
+
+# -------------
 # MVP Versions
 # -------------
 @broker.route('/mvp/select-idp')
