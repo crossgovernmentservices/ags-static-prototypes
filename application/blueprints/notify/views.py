@@ -35,3 +35,13 @@ def azure_productpage():
 def azure_pre_broker():
   return render_template('notify/pre_broker.html',
           next_url=url_for('broker.azure_request_email'))
+
+@notify.route('/okta/productpage')
+def okta_productpage():
+  return render_template('notify/product_page.html',
+          next_url=url_for('notify.okta_pre_broker'))
+
+@notify.route('/okta/prebroker')
+def okta_pre_broker():
+  return render_template('notify/pre_broker.html',
+          next_url=url_for('broker.okta_request_email'))
