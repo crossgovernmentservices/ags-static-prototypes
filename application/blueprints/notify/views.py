@@ -31,7 +31,7 @@ def post_sign_out():
 # ----------------
 @notify.route('/azure/productpage')
 def azure_productpage():
-  return render_template('notify/product_page.html',
+  return render_template('notify/product_pageV2.html',
           next_url=url_for('notify.azure_pre_broker'))
 
 @notify.route('/azure/prebroker')
