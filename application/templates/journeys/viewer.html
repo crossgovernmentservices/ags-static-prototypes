@@ -11,7 +11,7 @@
     <p class="js-full-height" title="Toggle full height on screens">Full height</p>
   </div>
 
-  <p class="app-header"><a href="/journeys">CSL & CSD screenshots/journeys</a></p>
+  <p class="app-header"><a href="/journeys">AGS journey viewer</a></p>
 
   <div id="content">
     <h1>{{ journeys.journey_name }}</h1>
@@ -30,7 +30,7 @@
           <h3>{{ path.caption }}</h3>
         </div>
         <div class="image-wrapper js-open-screen">
-            <img src="/static/images/journeys/{{ path.imgref }}" />
+            <img src="/static/images/{{ journey.img_path }}{{ path.imgref }}" />
         </div>
         <div class="arrow">→</div>
         <div class="note">

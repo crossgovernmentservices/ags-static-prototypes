@@ -1,0 +1,16 @@
+{
+  "journey_name": "AGS Department screenshots",
+  "last_updated": "21st Dec 2016",
+  "userjourneys": [
+    {
+        "title": "GDS google account",
+        "img_path": "google/",
+        "path": [{
+          "caption": "Sign in",
+          "imgref": "google_sign_in_email_screenshot.png",
+          "note":["some note", "another note"]
+        }
+        ]
+    }
+  ]
+}
