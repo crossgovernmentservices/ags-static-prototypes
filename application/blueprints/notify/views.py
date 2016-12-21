@@ -51,3 +51,16 @@ def okta_productpage():
 def okta_pre_broker():
   return render_template('notify/pre_broker.html',
           next_url=url_for('broker.okta_request_email'))
+
+# ----------------
+# Start CO flow
+# ----------------
+@notify.route('/co/productpage')
+def co_productpage():
+  return render_template('notify/product_pageV2.html',
+          next_url=url_for('notify.co_pre_broker'))
+
+@notify.route('/co/prebroker')
+def co_pre_broker():
+  return render_template('notify/pre_broker.html',
+          next_url=url_for('broker.co_request_email'))

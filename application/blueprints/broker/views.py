@@ -134,6 +134,42 @@ def okta_2_step():
           screenshot_url="okta/okta_2fa.png")
 
 # -------------
+# CO flow / screenshots
+# -------------
+@broker.route('/co/requestemail')
+def co_request_email():
+  return render_template('knowyouremail.html',
+          next_url=url_for('broker.co_email_confirm'))
+
+@broker.route('/co/email-confirm-dept')
+def co_email_confirm():
+  return render_template('mvp_confirm.html',
+          next_url=url_for('broker.co_handto_idp'))
+
+@broker.route('/co/handtoidp')
+def co_handto_idp():
+  return render_template('to_idp.html',
+          next_url=url_for('broker.co_google_email'))
+
+@broker.route('/co/google-email')
+def co_google_email():
+  return render_template('screenshot_layout.html',
+          onclick_url=url_for('broker.co_email'),
+          screenshot_url="co/co_google_email.png")
+
+@broker.route('/co/email')
+def co_email():
+  return render_template('screenshot_layout.html',
+          onclick_url=url_for('broker.co_2_step'),
+          screenshot_url="co/co_email.png")
+
+@broker.route('/co/co2fa')
+def co_2_step():
+  return render_template('screenshot_layout.html',
+          onclick_url=url_for('broker.handto_service'),
+          screenshot_url="co/co_2fa.png")
+
+# -------------
 # MVP Versions
 # -------------
 @broker.route('/mvp/select-idp')
