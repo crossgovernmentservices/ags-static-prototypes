@@ -2,12 +2,12 @@
 
 @import "../govuk_elements/public/sass/main.scss";
 
+@import "layout/layout.scss";
+@import "layout/grid.scss";
+
 @import "patterns/product-page.scss";
 @import "patterns/search.scss";
 @import "patterns/service-explanation-box.scss";
-
-
-$gutter-third: $gutter / 3;
 
 html, body {
   color: $text-colour;
@@ -23,10 +23,6 @@ html, body {
 
 .govuk-notify #global-header-bar {
   background-color: $yellow;
-}
-
-.column-three-quarters {
-  @include grid-column(2 / 3);
 }
 
 .confirm-banner {
