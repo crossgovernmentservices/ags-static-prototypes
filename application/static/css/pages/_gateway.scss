@@ -1,3 +1,11 @@
+.email-callout {
+  @include callout();
+}
+
+.email-callout--warning {
+  @include callout(lighten($focus-colour, 25%));
+}
+
 // add gray surrounding box to full
 // width search field
 .idp-search {

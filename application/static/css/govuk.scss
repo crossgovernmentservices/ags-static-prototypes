@@ -19,23 +19,7 @@
 
 @import "pages/index.scss";
 @import "pages/notify.scss";
-@import "pages/idp-selection-pages.scss";
-
-.authenticated-box {
-  @include banner-block();
-
-  .authenticated-details {
-    margin-top: 10px;
-  }
-}
-
-.email-callout {
-  @include callout();
-}
-
-.email-callout--warning {
-  @include callout(lighten($focus-colour, 25%));
-}
+@import "pages/gateway.scss";
 
 // -------
 // tweaks to make notice work how we want
