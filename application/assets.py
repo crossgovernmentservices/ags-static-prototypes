@@ -32,6 +32,15 @@ css_govuk = Bundle(
         '/static/govuk_frontend_toolkit/stylesheets/**/*.scss']
 )
 
+css_journeys = Bundle(
+  'css/journeys.scss',
+  filters=(libsass_output,),
+  output='gen/css/journeys.css',
+  depends=[
+        '/static/govuk_elements/public/sass/**/*.scss']
+)
+
 assets = Environment()
 
 assets.register('css_govuk', css_govuk)
+assets.register('css_journeys', css_journeys)
