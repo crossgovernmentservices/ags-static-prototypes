@@ -1,0 +1,11 @@
+html, body {
+  color: $text-colour;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 19px;
+  background-color: $page-colour;
+  height: 100%;
+  -webkit-text-size-adjust: none; /* Never autoresize text */
+}

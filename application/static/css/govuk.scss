@@ -5,21 +5,12 @@
 @import "layout/layout.scss";
 @import "layout/grid.scss";
 
+@import "base/base.scss";
+@import "base/typography.scss";
+
 @import "patterns/product-page.scss";
 @import "patterns/search.scss";
 @import "patterns/service-explanation-box.scss";
-
-html, body {
-  color: $text-colour;
-  padding: 0;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 19px;
-  background-color: $page-colour;
-  height: 100%;
-  -webkit-text-size-adjust: none; /* Never autoresize text */
-}
 
 .govuk-notify #global-header-bar {
   background-color: $yellow;
@@ -66,10 +57,6 @@ html, body {
   .heading-medium {
     margin-top: 0;
   }
-}
-
-.ta-right {
-  text-align: right;
 }
 
 .index-description {
@@ -169,10 +156,6 @@ html, body {
 }
 
 // Notify product page styles
-.bold-p {
-  font-weight: 700;
-}
-
 .team-image img {
   max-width: 460px;
   float: right;
