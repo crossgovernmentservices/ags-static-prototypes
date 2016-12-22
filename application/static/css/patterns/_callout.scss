@@ -1,0 +1,17 @@
+@mixin callout($bg-cl: lighten($light-blue, 42%)) {
+  border: 1px solid $border-colour;
+  background: $bg-cl;
+  border-radius: 4px;
+  padding: $gutter-half;
+  margin-bottom: 45px;
+
+  p {
+    margin: 0;
+  }
+
+  .email-given {
+    font-weight: bold;
+    font-size: 24px;
+    margin: $gutter-third 0;
+  }
+}

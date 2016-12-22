@@ -14,6 +14,7 @@
 @import "patterns/product-page.scss";
 @import "patterns/search.scss";
 @import "patterns/service-explanation-box.scss";
+@import "patterns/callout.scss";
 
 @import "pages/index.scss";
 @import "pages/notify.scss";
@@ -66,31 +67,12 @@
   }
 }
 
-%info-callout {
-  border: 1px solid $border-colour;
-  background: lighten($light-blue, 42%);
-  border-radius: 4px;
-  padding: $gutter-half;
-  margin-bottom: 45px;
-
-  p {
-    margin: 0;
-  }
-
-  .email-given {
-    font-weight: bold;
-    font-size: 24px;
-    margin: $gutter-third 0;
-  }
-}
-
 .email-callout {
-  @extend %info-callout;
+  @include callout();
 }
 
 .email-callout--warning {
-  @extend %info-callout;
-  background: lighten($focus-colour, 25%);
+  @include callout(lighten($focus-colour, 25%));
 }
 
 // -------
