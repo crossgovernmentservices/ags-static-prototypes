@@ -21,20 +21,6 @@
 @import "pages/notify.scss";
 @import "pages/idp-selection-pages.scss";
 
-.cya-section {
-  border-top: 1px solid $border-colour;
-  margin-top: $gutter;
-  padding-top: $gutter-half;
-
-  .heading-medium {
-    margin-top: 0;
-  }
-}
-
-.page-title {
-  margin: 60px 0 30px;
-}
-
 .authenticated-box {
   @include banner-block();
 
