@@ -20,15 +20,3 @@
 @import "pages/index.scss";
 @import "pages/notify.scss";
 @import "pages/gateway.scss";
-
-// -------
-// tweaks to make notice work how we want
-// -------
-.notice {
-  margin-top: $gutter;
-  p {
-    display: block;
-    padding-left: (35 + 30) + px;
-    margin-left: -$gutter-half;
-  }
-}

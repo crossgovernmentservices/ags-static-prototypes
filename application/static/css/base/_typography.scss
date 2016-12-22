@@ -26,3 +26,16 @@
 .page-title {
   margin: 60px 0 30px;
 }
+
+//
+// tweaks to make notice
+// callout work how we want
+//
+.notice {
+  margin-top: $gutter;
+  p {
+    display: block;
+    padding-left: (35 + 30) + px;
+    margin-left: -$gutter-half;
+  }
+}
