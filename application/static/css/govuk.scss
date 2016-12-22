@@ -1,22 +1,33 @@
-// Common place to import all GOV.UK CSS things
-
+// Import all GOV.UK CSS things first
 @import "../govuk_elements/public/sass/main.scss";
 
+// Import base files
+// I.e. resets, generic styles, variables, helpers, etc
 @import "base/base.scss";
 @import "base/variables.scss";
 @import "base/typography.scss";
 @import "base/forms.scss";
 @import "base/icons.scss";
 
+// For all hacks and things that need revisiting
+@import "base/shame.scss";
+
+// Import macro styles
+// I.e. grid helpers, components common to all pages
 @import "layout/grid.scss";
 @import "layout/header.scss";
 
+// Import micro styles
+// I.e. individual components, buttons, callouts, banners
 @import "patterns/product-page.scss";
 @import "patterns/search.scss";
 @import "patterns/service-explanation-box.scss";
 @import "patterns/callout.scss";
 @import "patterns/banners.scss";
 
+// Finally import page/area specific styles
+// If each page had own stylesheet we wouldn't 
+// have to do this
 @import "pages/index.scss";
 @import "pages/notify.scss";
 @import "pages/gateway.scss";
