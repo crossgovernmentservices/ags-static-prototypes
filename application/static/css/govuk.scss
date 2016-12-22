@@ -5,6 +5,7 @@
 @import "base/base.scss";
 @import "base/variables.scss";
 @import "base/typography.scss";
+@import "base/forms.scss";
 @import "base/icons.scss";
 
 @import "layout/grid.scss";
@@ -16,6 +17,7 @@
 
 @import "pages/index.scss";
 @import "pages/notify.scss";
+@import "pages/idp-selection-pages.scss";
 
 .confirm-banner {
   margin: $gutter-half 0;
@@ -39,39 +41,6 @@
 
   .heading-medium {
     margin-top: 0;
-  }
-}
-
-
-// tweaking search input for full page width
-.idp-search {
-  padding: 5px;
-  background: $panel-colour;
-  margin-top: $gutter-half;
-
-  .search__submit {
-    top: 5px;
-    right: 5px;
-  }
-}
-
-// search results
-.search-tabs {
-  margin-top: $gutter;
-  ul {
-    border-bottom: 1px solid $border-colour;
-    li {
-      color: $link-colour;
-      display: inline-block;
-      padding: 0 8px 10px;
-      font-size: 16px;
-      &.active {
-        border-bottom: 2px solid $link-colour;
-      }
-      a {
-        text-decoration: none;
-      }
-    }
   }
 }
 
@@ -131,14 +100,6 @@
 .email-callout--warning {
   @extend %info-callout;
   background: lighten($focus-colour, 25%);
-}
-
-.sub-selection-input {
-  display: none;
-}
-
-.selected + .sub-selection-input {
-  display: block;
 }
 
 // -------

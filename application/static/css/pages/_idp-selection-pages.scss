@@ -1,0 +1,32 @@
+// add gray surrounding box to full
+// width search field
+.idp-search {
+  padding: 5px;
+  background: $panel-colour;
+  margin-top: $gutter-half;
+
+  .search__submit {
+    top: 5px;
+    right: 5px;
+  }
+}
+
+// search tabs to filter results
+.search-tabs {
+  margin-top: $gutter;
+  ul {
+    border-bottom: 1px solid $border-colour;
+    li {
+      color: $link-colour;
+      display: inline-block;
+      padding: 0 8px 10px;
+      font-size: 16px;
+      &.active {
+        border-bottom: 2px solid $link-colour;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

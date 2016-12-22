@@ -1,0 +1,8 @@
+.sub-selection-input {
+  display: none;
+}
+
+.selected + .sub-selection-input {
+  display: block;
+}
+
