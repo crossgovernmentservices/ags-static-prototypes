@@ -12,9 +12,8 @@
 @import "patterns/search.scss";
 @import "patterns/service-explanation-box.scss";
 
-.govuk-notify #global-header-bar {
-  background-color: $yellow;
-}
+@import "pages/index.scss";
+@import "pages/notify.scss";
 
 .confirm-banner {
   margin: $gutter-half 0;
@@ -57,11 +56,6 @@
   .heading-medium {
     margin-top: 0;
   }
-}
-
-.index-description {
-  margin-bottom: 1em;
-  font-size: 16px;
 }
 
 
@@ -153,13 +147,6 @@
 .email-callout--warning {
   @extend %info-callout;
   background: lighten($focus-colour, 25%);
-}
-
-// Notify product page styles
-.team-image img {
-  max-width: 460px;
-  float: right;
-  margin-top: 10px;
 }
 
 #global-header .header-proposition #proposition-links.right-aligned li {
