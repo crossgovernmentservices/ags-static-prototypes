@@ -15,25 +15,11 @@
 @import "patterns/search.scss";
 @import "patterns/service-explanation-box.scss";
 @import "patterns/callout.scss";
+@import "patterns/banners.scss";
 
 @import "pages/index.scss";
 @import "pages/notify.scss";
 @import "pages/idp-selection-pages.scss";
-
-.confirm-banner {
-  margin: $gutter-half 0;
-  background: $turquoise;
-  color: $page-colour;
-  padding: 6px $gutter-half 4px;
-
-  p {
-    margin: 0;
-  }
-
-  .tick-icon {
-    padding-right: 10px;
-  }
-}
 
 .cya-section {
   border-top: 1px solid $border-colour;
@@ -50,18 +36,8 @@
 }
 
 .authenticated-box {
-  background: $turquoise;
-  color: $page-colour;
-  padding: 25px $gutter 20px;
-  margin-bottom: $gutter;
+  @include banner-block();
 
-  .tick-icon {
-    text-align: center;
-    margin: auto;
-  }
-  h3 {
-    margin: 0;
-  }
   .authenticated-details {
     margin-top: 10px;
   }
