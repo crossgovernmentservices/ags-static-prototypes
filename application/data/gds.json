@@ -1,6 +1,6 @@
 {
   "journey_name": "AGS Department screenshots",
-  "last_updated": "21st Dec 2016",
+  "last_updated": "Dec 2016",
   "userjourneys": [
     {
         "title": "GDS google account",
@@ -29,6 +29,20 @@
         },{
           "caption": "2 Factor auth",
           "imgref": "azure_2_step.png"
+        }
+        ]
+    },{
+        "title": "Okta example",
+        "img_path": "okta/",
+        "path": [{
+          "caption": "Email",
+          "imgref": "okta_email.png"
+        },{
+          "caption": "First time",
+          "imgref": "okta_first_time.png"
+        },{
+          "caption": "2 Factor auth",
+          "imgref": "okta_2fa.png"
         }
         ]
     }
