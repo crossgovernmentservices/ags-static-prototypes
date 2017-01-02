@@ -20,6 +20,17 @@
           "imgref": "google_sign_in_permissions_screenshot.png"
         }
         ]
+    },{
+        "title": "Azure example",
+        "img_path": "azure/",
+        "path": [{
+          "caption": "Email",
+          "imgref": "azure_email_page.png"
+        },{
+          "caption": "2 Factor auth",
+          "imgref": "azure_2_step.png"
+        }
+        ]
     }
   ]
 }
