@@ -6,9 +6,18 @@
         "title": "GDS google account",
         "img_path": "google/",
         "path": [{
-          "caption": "Sign in",
+          "caption": "Email",
           "imgref": "google_sign_in_email_screenshot.png",
           "note":["some note", "another note"]
+        },{
+          "caption": "Password",
+          "imgref": "google_sign_in_password_screenshot.png"
+        },{
+          "caption": "2 Factor auth",
+          "imgref": "google_sign_in_2fa_screenshot.png"
+        },{
+          "caption": "Permissions",
+          "imgref": "google_sign_in_permissions_screenshot.png"
         }
         ]
     }
