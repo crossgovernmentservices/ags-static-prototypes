@@ -45,6 +45,20 @@
           "imgref": "okta_2fa.png"
         }
         ]
+    },{
+        "title": "Cabinet office",
+        "img_path": "co/",
+        "path": [{
+          "caption": "Google email",
+          "imgref": "co_google_email.png"
+        },{
+          "caption": "Email",
+          "imgref": "co_email.png"
+        },{
+          "caption": "2 Factor auth choice",
+          "imgref": "co_2fa.png"
+        }
+        ]
     }
   ]
 }
