@@ -1,0 +1,17 @@
+.sub-selection-input {
+  display: none;
+}
+
+.selected + .sub-selection-input {
+  display: block;
+}
+
+// making radio labels more descriptive
+.radio-label-heading {
+  font-weight: bolder;
+}
+
+.radio-label-desc {
+  font-size: 16px;
+  margin: 0.25em 0;
+}

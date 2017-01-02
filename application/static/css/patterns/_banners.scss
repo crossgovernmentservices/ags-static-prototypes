@@ -1,0 +1,15 @@
+@mixin banner-block($bg-cl: $turquoise, $txt-cl: $page-colour) {
+  background: $bg-cl;
+  color: $txt-cl;
+  padding: 25px $gutter 20px;
+  margin-bottom: $gutter;
+
+  h3 {
+    margin: 0;
+  }
+
+  .tick-icon {
+    text-align: center;
+    margin: auto;
+  }
+}

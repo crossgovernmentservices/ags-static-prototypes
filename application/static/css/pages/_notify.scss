@@ -1,0 +1,17 @@
+.govuk-notify #global-header-bar {
+  background-color: $yellow;
+}
+
+.authenticated-box {
+  @include banner-block();
+
+  .authenticated-details {
+    margin-top: 10px;
+  }
+}
+
+.team-image img {
+  max-width: 460px;
+  float: right;
+  margin-top: 10px;
+}

@@ -1,0 +1,41 @@
+// An inline definition list - name:value pairs for example
+/* dd */.definition-inline {
+  @extend %contain-floats;
+  dt {
+    font-weight: bold;
+    clear: left;
+    float: left;
+    margin-right: $gutter-half;
+    &:after {
+      content: ':';
+    }
+  }
+  dd {
+    float: left;
+  }
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.bold-p {
+  font-weight: 700;
+}
+
+.page-title {
+  margin: 60px 0 30px;
+}
+
+//
+// tweaks to make notice
+// callout work how we want
+//
+.notice {
+  margin-top: $gutter;
+  p {
+    display: block;
+    padding-left: (35 + 30) + px;
+    margin-left: -$gutter-half;
+  }
+}
