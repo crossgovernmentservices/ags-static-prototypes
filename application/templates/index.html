@@ -8,11 +8,13 @@
 
   <p class="lede text">Static prototypes for the various pages and flow through the proposed broker.</p>
 
-  <h2 class="heading-large">Pages</h2>
-
-  <h3 class="heading-medium">MVP Pages</h3>
+  <h2 class="heading-large">Journeys</h2>
 
   <ul class="list-bullet">
+    <li>
+      <a href="{{ url_for('journeys.journeys_home') }}">See department screenshots</a>
+      <p class="text index-description"></p>
+    </li>
     <li>
       <a href="{{ url_for('notify.product_page2') }}">Start MVP flow - Google</a>
       <p class="text index-description"></p>
@@ -29,6 +31,13 @@
       <a href="{{ url_for('notify.co_productpage') }}">Start MVP flow - CO</a>
       <p class="text index-description"></p>
     </li>
+  </ul>
+
+  <h2 class="heading-large">Pages</h2>
+
+  <h3 class="heading-medium">MVP Pages</h3>
+
+  <ul class="list-bullet">
     <li>
       <a href="{{ url_for('broker.mvp_select_idp') }}">Select IDP</a>
       <p class="text index-description"></p>
