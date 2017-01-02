@@ -1,14 +1,62 @@
 {
   "journey_name": "AGS Department screenshots",
-  "last_updated": "21st Dec 2016",
+  "last_updated": "Dec 2016",
   "userjourneys": [
     {
         "title": "GDS google account",
         "img_path": "google/",
         "path": [{
-          "caption": "Sign in",
+          "caption": "Email",
           "imgref": "google_sign_in_email_screenshot.png",
           "note":["some note", "another note"]
+        },{
+          "caption": "Password",
+          "imgref": "google_sign_in_password_screenshot.png"
+        },{
+          "caption": "2 Factor auth",
+          "imgref": "google_sign_in_2fa_screenshot.png"
+        },{
+          "caption": "Permissions",
+          "imgref": "google_sign_in_permissions_screenshot.png"
+        }
+        ]
+    },{
+        "title": "Azure example",
+        "img_path": "azure/",
+        "path": [{
+          "caption": "Email",
+          "imgref": "azure_email_page.png"
+        },{
+          "caption": "2 Factor auth",
+          "imgref": "azure_2_step.png"
+        }
+        ]
+    },{
+        "title": "Okta example",
+        "img_path": "okta/",
+        "path": [{
+          "caption": "Email",
+          "imgref": "okta_email.png"
+        },{
+          "caption": "First time",
+          "imgref": "okta_first_time.png"
+        },{
+          "caption": "2 Factor auth",
+          "imgref": "okta_2fa.png"
+        }
+        ]
+    },{
+        "title": "Cabinet office",
+        "img_path": "co/",
+        "path": [{
+          "caption": "Google email",
+          "imgref": "co_google_email.png"
+        },{
+          "caption": "Email",
+          "imgref": "co_email.png"
+        },{
+          "caption": "2 Factor auth choice",
+          "imgref": "co_2fa.png"
         }
         ]
     }
