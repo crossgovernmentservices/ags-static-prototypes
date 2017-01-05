@@ -39,3 +39,7 @@
     margin-left: -$gutter-half;
   }
 }
+
+summary + .panel {
+  margin-left: 4px;
+}
