@@ -3,6 +3,7 @@
 
 // Import base files
 // I.e. resets, generic styles, variables, helpers, etc
+@import "base/helpers.scss";
 @import "base/base.scss";
 @import "base/variables.scss";
 @import "base/typography.scss";
@@ -24,6 +25,7 @@
 @import "patterns/service-explanation-box.scss";
 @import "patterns/callout.scss";
 @import "patterns/banners.scss";
+@import "patterns/pagination.scss";
 
 // Finally import page/area specific styles
 // If each page had own stylesheet we wouldn't 
