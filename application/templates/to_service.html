@@ -9,11 +9,11 @@
   <a href="/" class="link-back">Back</a>
 
   <div class="messaging-panel">
-    <div class="gird-row">
-      <div class="column-quarter single-image">
-        <img src="/static/images/icon-authenticated.png" alt="" />
+    <div class="grid-row">
+      <div class="column-third single-image">
+        <img src="/static/images/icon-authed-large.svg" alt="Authenticated">
       </div>
-      <div class="column-three-quarters panel-content">
+      <div class="column-two-thirds">
         <p class="lede">You have been authenticated. You are now being redirected back to the GOV.UK Notify service.</p>
         <div class="panel">You are currently signed into your work email account.</div>
       </div>
@@ -21,10 +21,22 @@
 
   </div>
 
+  <div class="pagination">
+    <ul>
+      <li class="next">
+        <a href="{{ url_for('notify.register_account') }}">
+          <span class="pagination-label">Continue</span>
+          <span class="pagination-text">If this doesn't redirect in <span class="redirect-timer">7 seconds</span> click here</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
 </main>
 {% endblock %}
 
 {% block body_end %}
+<script src="/static/govuk_elements/public/javascripts/vendor/jquery-1.11.0.min.js"></script>
 <script>
   var redirect_url = "{{ url_for('notify.register_account') }}";
   window.setTimeout(function(){
@@ -32,6 +44,28 @@
     // Move to a new location or you can do something else
     window.location.href = redirect_url;
 
-  }, 4000);
+  }, 7000);
+
+  ;(function ($, window) {
+    "use strict"
+
+    $(function() {
+      var counter = 7;
+      var $secondEl = $(".redirect-timer");
+      var timer;
+
+      timer = setInterval(function() {
+          counter--;
+          if(counter < 0) {
+              clearInterval( timer );
+          } else if (counter == 1) {
+            $secondEl.text("1 second");
+          } else {
+              $secondEl.text(counter + " seconds");
+          }
+      }, 1000);
+    });
+
+  }).call(this, jQuery, window);
 </script>
 {% endblock %}

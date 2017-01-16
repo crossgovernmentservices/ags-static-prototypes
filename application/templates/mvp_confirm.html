@@ -63,14 +63,9 @@
     {% endif %}
 
     <div class="form-group">
-      <a href="{{ next_url|default(url_for('broker.handto_idp')) }}" class="button">Confirm</a>
+      <a href="{{ next_url|default(url_for('broker.handto_idp')) }}" class="button">Continue</a>
     </div>
   </form>
-
-  <div class="panel text">
-    <p>You will be redirected to your work login.</p>
-    <p>If you are already signed in, you may not be prompted to enter your details again.</p>
-  </div>
 
 </main>
 {% endblock %}
