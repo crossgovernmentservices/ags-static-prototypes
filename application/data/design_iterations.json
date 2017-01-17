@@ -59,6 +59,45 @@
           "imgref": "create_account_eligible.png"
         }
         ]
+    },{
+        "title": "User testing round 3",
+        "img_path": "round3/",
+        "path": [{
+          "caption": "Notify prod page v2",
+          "imgref": "notify_prod_page_v2.png"
+        },{
+          "caption": "Pre broker page",
+          "imgref": "pre_broker_first.png"
+        },{
+          "caption": "Ask user for work email",
+          "imgref": "know_work_email_v1.png"
+        },{
+          "caption": "Confirm department",
+          "imgref": "confirm_page_v2.png"
+        },{
+          "caption": "Redirecting to IdP",
+          "imgref": "redirect_not_authenticated.png"
+        },{
+          "caption": "Email",
+          "imgref": "../google/google_sign_in_email_screenshot.png",
+          "note":["some note", "another note"]
+        },{
+          "caption": "Password",
+          "imgref": "../google/google_sign_in_password_screenshot.png"
+        },{
+          "caption": "2 Factor auth",
+          "imgref": "../google/google_sign_in_2fa_screenshot.png"
+        },{
+          "caption": "Permissions",
+          "imgref": "../google/google_sign_in_permissions_screenshot.png"
+        },{
+          "caption": "Redirecting to service",
+          "imgref": "redirect_authenticated.png"
+        },{
+          "caption": "Create account",
+          "imgref": "create_account_eligible.png"
+        }
+        ]
     }
   ]
 }
