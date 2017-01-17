@@ -1,0 +1,34 @@
+{
+  "journey_name": "Design iterations",
+  "last_updated": "Jan 2017",
+  "userjourneys": [
+    {
+        "title": "User testing 2nd Nov",
+        "img_path": "round1/",
+        "path": [{
+          "caption": "Notify prod page v1",
+          "imgref": "notify_prod_page_v1.png"
+        },{
+          "caption": "Select IdP",
+          "imgref": "dex_list.png"
+        },{
+          "caption": "Email",
+          "imgref": "../google/google_sign_in_email_screenshot.png",
+          "note":["some note", "another note"]
+        },{
+          "caption": "Password",
+          "imgref": "../google/google_sign_in_password_screenshot.png"
+        },{
+          "caption": "2 Factor auth",
+          "imgref": "../google/google_sign_in_2fa_screenshot.png"
+        },{
+          "caption": "Permissions",
+          "imgref": "../google/google_sign_in_permissions_screenshot.png"
+        },{
+          "caption": "Create account",
+          "imgref": "create_account_3_fields.png"
+        }
+        ]
+    }
+  ]
+}
