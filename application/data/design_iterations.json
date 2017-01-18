@@ -1,6 +1,7 @@
 {
-  "journey_name": "Design iterations",
+  "journey_name": "Sign in journey - iterations",
   "last_updated": "Jan 2017",
+  "description": "This journey has been the main focus of the alpha. The screenshots, taken at stages of development to coincide with research sessions, highlight how it has changed over time.",
   "userjourneys": [
     {
         "title": "User testing 2nd Nov",
