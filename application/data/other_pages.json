@@ -1,0 +1,31 @@
+{
+  "journey_name": "Other pages",
+  "last_updated": "Jan 2017",
+  "userjourneys": [
+    {
+        "title": "Reduced IdP set",
+        "img_path": "other_pages/",
+        "path": [{
+          "caption": "Simple list",
+          "imgref": "short_list_idps.png"
+        }
+        ]
+    },{
+        "title": "Full IdP set",
+        "img_path": "other_pages/",
+        "path": [{
+          "caption": "Search for department",
+          "imgref": "department_list_with_search.png"
+        }
+        ]
+    },{
+        "title": "Correct email",
+        "img_path": "other_pages/",
+        "path": [{
+          "caption": "Enter email address",
+          "imgref": "enter_email_address.png"
+        }
+        ]
+    }
+  ]
+}
