@@ -16,6 +16,8 @@
   <div id="content">
     <h1>{{ journeys.journey_name }}</h1>
 
+    <p class="intro">{{ journeys.description }}</p>
+
     <p class="exemplar-intro">Scenarios: <span class="all-toggle">(<span class="js-open-all">open all</span><span class="js-close-all">close all</span>)</span></p>
 
     {% for journey in journeys.userjourneys %}
