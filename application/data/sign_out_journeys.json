@@ -1,0 +1,24 @@
+{
+  "journey_name": "Sign out journey - iterations",
+  "last_updated": "Jan 2017",
+  "description": "A few of the changes we've made to the sign out flow and pages.",
+  "userjourneys": [
+    {
+        "title": "Initial",
+        "img_path": "sign_out/",
+        "path": [{
+          "caption": "Page in Notify",
+          "imgref": "signed_out_notify.png"
+        }
+        ]
+    },{
+        "title": "In broker",
+        "img_path": "sign_out/",
+        "path": [{
+          "caption": "Page in gateway",
+          "imgref": "signed_out.png"
+        }
+        ]
+    }
+  ]
+}
