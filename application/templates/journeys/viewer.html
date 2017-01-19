@@ -39,6 +39,24 @@
           {% for note in path.note %}
           <p>{{ note }}</p>
           {% endfor %}
+
+          {% if path.changes is defined %}
+            <h3>Changes</h3>
+            <ul>
+            {% for change in path.changes %}
+              <li>{{ change }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+          {% if path.issues is defined %}
+            <h3>Issues</h3>
+            <ul>
+            {% for issue in path.issues %}
+              <li>{{ issue }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+
           <p class="next button js-next-screen">Next</p>
           <p class="prev button js-prev-screen">Prev</p>
         </div>
