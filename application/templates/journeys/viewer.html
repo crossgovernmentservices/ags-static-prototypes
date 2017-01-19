@@ -29,7 +29,7 @@
         <div class="image-title">
           <span class="close js-close-screen">✕</span>
           <span class="journey">{{ journey.title }}</span>
-          <h3>{{ path.caption }}</h3>
+          <h2>{{ path.caption }}</h2>
         </div>
         <div class="image-wrapper js-open-screen">
             <img src="/static/images/{{ journey.img_path }}{{ path.imgref }}" />
@@ -48,11 +48,11 @@
             {% endfor %}
             </ul>
           {% endif %}
-          {% if path.issues is defined %}
-            <h3>Issues</h3>
+          {% if path.findings is defined %}
+            <h3>Findings</h3>
             <ul>
-            {% for issue in path.issues %}
-              <li>{{ issue }}</li>
+            {% for finding in path.findings %}
+              <li>{{ finding }}</li>
             {% endfor %}
             </ul>
           {% endif %}
