@@ -89,7 +89,7 @@
           "findings": ["One user "]
         },{
           "caption": "Confirm department",
-          "imgref": "confirm_page_v2.png",
+          "imgref": "confirm_page_noise.png",
           "findings": [" A user commented that they wouldn't read content under button as too long"]
         },{
           "caption": "Redirecting to IdP",
@@ -113,7 +113,7 @@
           "imgref": "redirect_authenticated.png"
         },{
           "caption": "Create account",
-          "imgref": "create_account_eligible.png",
+          "imgref": "create_account_eligible_v1.png",
           "findings": ["Copy for phone number confusing as no commmand"]
         }
         ]
