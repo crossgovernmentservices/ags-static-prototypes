@@ -49,11 +49,11 @@
           "caption": "Select IdP",
           "imgref": "dex_list.png",
           "changes": ["Warn user that if they are already logged in they won't have to provide their credentials again"],
-          "findings": ["3/6 users hesitated when selecting department", "Users used email prefix to determine department", "User used to having 2 emails (CO and GDS)", "User looked for service not department", "I'd abandon things where I'm asked which department I work in"]
+          "findings": ["3/6 users hesitated when selecting department", "Users used email prefix to determine department", "User used to having 2 emails (CO and GDS)", "User looked for service not department", "'I'd abandon things where I'm asked which department I work in'"]
         },{
           "caption": "Email",
           "imgref": "../google/google_sign_in_email_screenshot.png",
-          "findings": ["user confused why notify needs access to Google, would stop doing this", "2/6 Didn't expect to go from selecting place of work to google sign in", "User wanted to know what to expect before logging in with google"]
+          "findings": ["user confused why notify needs access to Google, would end journey here", "2/6 Didn't expect to go from selecting place of work to google sign in", "User wanted to know what to expect before logging in with google"]
         },{
           "caption": "Password",
           "imgref": "../google/google_sign_in_password_screenshot.png"
@@ -64,11 +64,11 @@
         },{
           "caption": "Permissions",
           "imgref": "../google/google_sign_in_permissions_screenshot.png",
-          "findings": ["5 didn't hesitte to accept", "I'd speak to someone I trust for advice when giving permission"]
+          "findings": ["5 didn't hesitate to accept", "'I'd speak to someone I trust for advice when giving permission'"]
         },{
           "caption": "Create account",
-          "imgref": "create_account_eligible.png",
-          "findings": ["Queried why didn't autofill didn't complete name", "5/6 understood email had been passed as eligible"],
+          "imgref": "../round3/create_account_eligible_v1.png",
+          "findings": ["Queried why autofill didn't complete name", "5/6 understood email had been passed as eligible"],
           "changes": ["Inform user that their email has checked out (eligiblity check?). Helps to separate journey from a traditional register journey."]
         }
         ]
@@ -85,8 +85,8 @@
         },{
           "caption": "Ask user for work email",
           "imgref": "know_work_email_v1.png",
-          "changes": ["New page. Identifier users use to log in is their work email address so lets ask for that", "No goes to list of IdPs"],
-          "findings": ["One user "]
+          "changes": ["New page. Identifier users use to log in is their work email address so lets ask for that(rewrite)", "No goes to list of IdPs"],
+          "findings": ["1 user asked what would happen if they didn't know their work email"]
         },{
           "caption": "Confirm department",
           "imgref": "confirm_page_noise.png",
@@ -94,16 +94,18 @@
         },{
           "caption": "Redirecting to IdP",
           "imgref": "redirect_not_authenticated.png",
-          "findings": ["0 users uncomfortable going to 3rd party email", "Redirect too quick to read content", "1 user expected link via email not to log in with email (no previous experience of this auth approach)"]
+          "findings": ["Redirect too quick to read content", "1 user expected link via email not to log in with email (no previous experience of this auth approach)"]
         },{
           "caption": "Email",
-          "imgref": "../google/google_sign_in_email_screenshot.png"
+          "imgref": "../google/google_sign_in_email_screenshot.png",
+          "findings": ["0 users uncomfortable going to 3rd party email"]
         },{
           "caption": "Password",
           "imgref": "../google/google_sign_in_password_screenshot.png"
         },{
           "caption": "2 Factor auth",
-          "imgref": "../google/google_sign_in_2fa_screenshot.png"
+          "imgref": "../google/google_sign_in_2fa_screenshot.png",
+          "findings": ["2/6 users didin't have phone on them"]
         },{
           "caption": "Permissions",
           "imgref": "../google/google_sign_in_permissions_screenshot.png",
@@ -114,7 +116,7 @@
         },{
           "caption": "Create account",
           "imgref": "create_account_eligible_v1.png",
-          "findings": ["Copy for phone number confusing as no commmand"]
+          "findings": ["Copy for phone number confusing as no command", "3 users mentioned that full name field wasn't autofilled"]
         }
         ]
     },{
@@ -126,7 +128,7 @@
         },{
           "caption": "Pre broker page",
           "imgref": "pre_broker_panel_text_expanded.png",
-          "changes": ["Generic copy update, replacing email with login", "More information for users about the hows and whys on this approach"]
+          "changes": ["Generic copy update, replacing 'work email' with 'work login'", "More information for users about the hows and whys of this approach"]
         },{
           "caption": "Ask user for work email",
           "imgref": "know_work_email_v2.png",
@@ -138,7 +140,7 @@
         },{
           "caption": "Redirecting to IdP",
           "imgref": "redirect_not_authenticated_v2.png",
-          "changes": ["Add continus link for users to click if redirect takes too long or fails (progressive enhancement)", "increase redirect time length so users have more chance to read content", "make imagery large so that is more distinct from redirect back to service page"],
+          "changes": ["Add continous link for users to click if redirect takes too long or fails (progressive enhancement)", "increase redirect time length so users have more chance to read content", "make imagery large so that is more distinct from redirect back to service page"],
           "findings": ["Icons too close to where Verify brand want to be. Need to update."]
         },{
           "caption": "Email",

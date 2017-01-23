@@ -15,10 +15,11 @@
         },{
           "caption": "Ask user for work email",
           "imgref": "know_work_email_v2.png",
-          "findings": ["'Do I have to do it again?'", "I didn't expect to have to verify email address when logging back in"]
+          "findings": ["'Do I have to do it again?'", "'I didn't expect to have to verify email address when logging back in'", "Shame the field doesn't remember my email address"]
         },{
           "caption": "Confirm department",
-          "imgref": "confirm_department_denoise.png"
+          "imgref": "confirm_department_denoise.png",
+          "findings": ["'I thought I would've been verified already'"]
         },{
           "caption": "Redirecting to IdP",
           "imgref": "redirect_not_authenticated_v2.png"
