@@ -8,7 +8,8 @@
         "img_path": "sign_out/",
         "path": [{
           "caption": "Page in Notify",
-          "imgref": "signed_out_notify.png"
+          "imgref": "signed_out_notify.png",
+          "findings": ["2/6 users expected to sign out of everything", "2/6 users didn't think they'd be signed into google account, 1 thought they'd be signed out, 1 just didn't know", "When asked if they were still logged into Gmail, 1 user said 'I'd hope so'"]
         }
         ]
     },{
@@ -16,7 +17,9 @@
         "img_path": "sign_out/",
         "path": [{
           "caption": "Page in gateway",
-          "imgref": "signed_out.png"
+          "imgref": "signed_out.png",
+          "findings": ["1 user couldn't see link back to Notify anywhere"],
+          "changes": ["moved into gateway so that onus of getting journey right is on us not each individual service", "explicitly tell user they will still be logged into their email account"]
         }
         ]
     }
