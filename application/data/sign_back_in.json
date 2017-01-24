@@ -1,0 +1,64 @@
+{
+  "journey_name": "Sign back journey",
+  "last_updated": "Jan 2017",
+  "description": "Current and planned flows of the re-auth journey",
+  "userjourneys": [
+    {
+        "title": "Current sign back in jounrey (*no different than sign in)",
+        "img_path": "round4/",
+        "path": [{
+          "caption": "Notify prod page v2",
+          "imgref": "../round3/notify_prod_page_v2.png"
+        },{
+          "caption": "Pre broker page",
+          "imgref": "pre_broker_panel_text_expanded.png"
+        },{
+          "caption": "Ask user for work email",
+          "imgref": "know_work_email_v2.png",
+          "findings": ["'Do I have to do it again?'", "'I didn't expect to have to verify email address when logging back in'", "Shame the field doesn't remember my email address"]
+        },{
+          "caption": "Confirm department",
+          "imgref": "confirm_department_denoise.png",
+          "findings": ["'I thought I would've been verified already'"]
+        },{
+          "caption": "Redirecting to IdP",
+          "imgref": "redirect_not_authenticated_v2.png"
+        },{
+          "caption": "Redirecting to service",
+          "imgref": "redirect_authenticated_v2.png",
+          "note": ["Quite often the user will already be logged into their work email. In these situations the user will not see their IdP. We'd like to test whether this approach still works or whether these 2 interstitial pages are redundant."],
+          "findings": ["user thought it was good they were already logged in and password wasn't required again", "1 user uncomfortable already logged into their google account"]
+        },{
+          "caption": "Create account",
+          "imgref": "../round3/create_account_eligible.png",
+          "findings": ["Very straight forward signing back in. Already verified me so quite straightforward."]
+        }
+        ]
+    },{
+        "title": "Sign in journey to test (interstitial may not be necessary)",
+        "img_path": "round4/",
+        "path": [{
+          "caption": "Notify prod page v2",
+          "imgref": "../round3/notify_prod_page_v2.png"
+        },{
+          "caption": "Pre broker page",
+          "imgref": "pre_broker_panel_text_expanded.png",
+          "note": ["Questionable whether needed but ultimately down to the service"]
+        },{
+          "caption": "Confirm department",
+          "imgref": "confirm_department_denoise.png"
+        },{
+          "caption": "Redirecting to IdP*",
+          "imgref": "redirect_not_authenticated_v2.png",
+          "note": ["Idea would be to reduce the time taken to redirect this page.", "We'd like to track the number of users that click the continue button, this would give us an indication that they don't need this screen any longer and we can consider not showing those users anymore"]
+        },{
+          "caption": "Redirecting to service*",
+          "imgref": "redirect_authenticated_v2.png"
+        },{
+          "caption": "Create account",
+          "imgref": "../round3/create_account_eligible.png"
+        }
+        ]
+    }
+  ]
+}

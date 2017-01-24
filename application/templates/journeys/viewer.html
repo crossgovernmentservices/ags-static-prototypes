@@ -29,7 +29,7 @@
         <div class="image-title">
           <span class="close js-close-screen">✕</span>
           <span class="journey">{{ journey.title }}</span>
-          <h3>{{ path.caption }}</h3>
+          <h2>{{ path.caption }}</h2>
         </div>
         <div class="image-wrapper js-open-screen">
             <img src="/static/images/{{ journey.img_path }}{{ path.imgref }}" />
@@ -39,6 +39,24 @@
           {% for note in path.note %}
           <p>{{ note }}</p>
           {% endfor %}
+
+          {% if path.changes is defined %}
+            <h3>Changes</h3>
+            <ul>
+            {% for change in path.changes %}
+              <li>{{ change }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+          {% if path.findings is defined %}
+            <h3>Findings</h3>
+            <ul>
+            {% for finding in path.findings %}
+              <li>{{ finding }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+
           <p class="next button js-next-screen">Next</p>
           <p class="prev button js-prev-screen">Prev</p>
         </div>
