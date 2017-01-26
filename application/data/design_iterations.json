@@ -94,7 +94,7 @@
         },{
           "caption": "Redirecting to IdP",
           "imgref": "redirect_not_authenticated.png",
-          "findings": ["Redirect too quick to read content", "1 user expected link via email not to log in with email (no previous experience of this auth approach)"]
+          "findings": ["Redirect too quick to read content. Disappeared as one user was reading", "1 user expected link via email not to log in with email (no previous experience of this auth approach)"]
         },{
           "caption": "Email",
           "imgref": "../google/google_sign_in_email_screenshot.png",
