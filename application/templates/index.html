@@ -61,71 +61,76 @@
 
   <h2 class="heading-large">Individual pages</h2>
 
-  <h3 class="heading-medium">MVP Pages</h3>
+  <h3 class="heading-medium">Gateway pages</h3>
 
-  <ul class="list-bullet">
-    <li>
-      <a href="{{ url_for('broker.mvp_select_idp') }}">Select IDP</a>
-      <p class="text index-description"></p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.mvp_email_confirm_dept') }}">Confirm department based on email provided</a>
-      <p class="text index-description"></p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.mvp_auto_routing') }}">Confirm department when coming through broker again</a>
-      <p class="text index-description"></p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.mvp_sign_out') }}">Sign out</a>
-      <p class="text index-description">Broker can catch sign out attempts from a service and handle them. A possibility is to present the user with a screen indicating they have been logged out of Service X, and that you are still signed in to their email account.</p>
-    </li>
-  </ul>
-
-  <h3 class="heading-medium">Broker pages</h3>
-
-  <ul class="list-bullet">
-    <li>
-      <a href="{{ url_for('broker.confirm') }}">Confirm IDP routing</a>
-      <p class="text index-description">We shouldn't automatically route the user to an IDP without getting them to confirm because we have no control if we send them to the wrong one. They might get stuck.</p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.choose') }}">Choose from a reduced list of IDPs</a>
-      <p class="text index-description">Similar to above but present a choice of IDPs the user could belong to.</p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.request_email') }}">Check if user knows their email</a>
-      <p class="text index-description">We can use the email to filter the list of IDPs so see if they user knows theirs.</p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.email_suggestion') }}">IDP choice based on email</a>
-      <p class="text index-description">Given the email provided above give users a choice of IDP/department.</p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.similar_email_suggestion') }}">IDP choice based on email being similar to another</a>
-      <p class="text index-description">Users might make mistakes entering their email, try to mitigate against these. If email looks similar to other departments then suggest those.</p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.change_email') }}">User changes email address</a>
-      <p class="text index-description">Need to give user ability to re-enter email address incase they put an incorrect one in.</p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.select') }}">Find and select from complete list of IDPs</a>
-      <p class="text index-description">The route if we have no information to use to filter the list of IDPs automatically. Present full list to user.</p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.first_time') }}">Ask user if first time using broker</a>
-      <p class="text index-description">Optional: check to see if user has used the broker before. Similar approach to Verify. Depends on how visible we want the broker to be. Does the user need to know that much about it?</p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.handto_idp') }}">Handoff to IDP</a>
-      <p class="text index-description"></p>
-    </li>
-    <li>
-      <a href="{{ url_for('broker.handto_service') }}">Handoff back to Service</a>
-      <p class="text index-description"></p>
-    </li>
-  </ul>
+  <div class="grid-row">
+    <div class="column-half">
+      <h4 class="heading-small">Current pages</h4>
+      <ul class="list-bullet">
+        <li>
+          <a href="{{ url_for('broker.request_email') }}">Check if user knows their email</a>
+          <p class="text index-description">We can use the email to filter the list of IDPs so see if they user knows theirs.</p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.mvp_select_idp') }}">Select IDP from a list</a>
+          <p class="text index-description"></p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.mvp_email_confirm_dept') }}">Confirm department based on email provided</a>
+          <p class="text index-description"></p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.mvp_auto_routing') }}">Confirm department when coming through gateway again</a>
+          <p class="text index-description"></p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.mvp_sign_out') }}">Sign out (with user ending on gateway)</a>
+          <p class="text index-description">Broker can catch sign out attempts from a service and handle them. A possibility is to present the user with a screen indicating they have been logged out of Service X, and that you are still signed in to their email account.</p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.handto_idp') }}">Interstitial 1 - handoff to IDP</a>
+          <p class="text index-description"></p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.handto_service') }}">Interstitial 2 - hand back to Service</a>
+          <p class="text index-description"></p>
+        </li>
+      </ul>
+    </div>
+    <div class="column-half">
+      <h4 class="heading-small">Previous page designs</h4>
+      <ul class="list-bullet">
+        <li>
+          <a href="{{ url_for('broker.confirm') }}">Confirm IDP routing</a>
+          <p class="text index-description">We shouldn't automatically route the user to an IDP without getting them to confirm because we have no control if we send them to the wrong one. They might get stuck.</p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.choose') }}">Choose from a reduced list of IDPs</a>
+          <p class="text index-description">Similar to above but present a choice of IDPs the user could belong to.</p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.email_suggestion') }}">IDP choice based on email</a>
+          <p class="text index-description">Given the email provided above give users a choice of IDP/department.</p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.similar_email_suggestion') }}">IDP choice based on email being similar to another</a>
+          <p class="text index-description">Users might make mistakes entering their email, try to mitigate against these. If email looks similar to other departments then suggest those.</p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.change_email') }}">User changes email address</a>
+          <p class="text index-description">Need to give user ability to re-enter email address incase they put an incorrect one in.</p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.select') }}">Find and select from complete list of IDPs</a>
+          <p class="text index-description">The route if we have no information to use to filter the list of IDPs automatically. Present full list to user.</p>
+        </li>
+        <li>
+          <a href="{{ url_for('broker.first_time') }}">Ask user if first time using broker</a>
+          <p class="text index-description">Optional: check to see if user has used the broker before. Similar approach to Verify. Depends on how visible we want the broker to be. Does the user need to know that much about it?</p>
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <h3 class="heading-medium">Notify pages</h3>
   <ul class="list-bullet">
