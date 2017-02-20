@@ -22,7 +22,7 @@
         <div class="button-container">
           <a class="button button-start" href="{{ next_url|default(url_for('notify.pre_broker')) }}" role="button">Create an account</a>
 
-          or <a href="https://www.notifications.service.gov.uk/sign-in"> sign in</a> if you've used it before
+          or <a href="{{ url_for('broker.mvp_auto_routing') }}"> sign in</a> if you've used it before
         </div>
 
       </div>
