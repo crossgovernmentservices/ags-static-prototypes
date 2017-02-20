@@ -23,24 +23,37 @@
 
   <h2 class="heading-large">Complete flows</h2>
 
-  <ul class="list-bullet">
-    <li>
-      <a href="{{ url_for('notify.product_page2') }}">Start MVP flow - Google</a>
-      <p class="text index-description"></p>
-    </li>
-    <li>
-      <a href="{{ url_for('notify.azure_productpage') }}">Start MVP flow - Azure</a>
-      <p class="text index-description"></p>
-    </li>
-    <li>
-      <a href="{{ url_for('notify.okta_productpage') }}">Start MVP flow - Okta</a>
-      <p class="text index-description"></p>
-    </li>
-    <li>
-      <a href="{{ url_for('notify.co_productpage') }}">Start MVP flow - CO</a>
-      <p class="text index-description"></p>
-    </li>
-  </ul>
+  <div class="grid-row">
+    <div class="column-half">
+      <ul class="list-bullet">
+        <li>
+          <a href="{{ url_for('notify.product_page2') }}">Main sign in journey</a>
+          <p class="text index-description"></p>
+        </li>
+      </ul>
+    </div>
+    <div class="column-half">
+      <ul class="list-bullet">
+        <li>
+          <a href="{{ url_for('notify.product_page2') }}">Sign in journey (with Google IdP)</a>
+          <p class="text index-description"></p>
+        </li>
+        <li>
+          <a href="{{ url_for('notify.azure_productpage') }}">Sign in journey (with Azure IdP)</a>
+          <p class="text index-description"></p>
+        </li>
+        <li>
+          <a href="{{ url_for('notify.okta_productpage') }}">Sign in journey (with Okta IdP)</a>
+          <p class="text index-description"></p>
+        </li>
+        <li>
+          <a href="{{ url_for('notify.co_productpage') }}">Sign in journey (with CO IdP)</a>
+          <p class="text index-description"></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 
   <h2 class="heading-large">Pages</h2>
 
