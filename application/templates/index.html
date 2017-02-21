@@ -110,31 +110,31 @@
       <ul class="list-bullet">
         <li>
           <a href="{{ url_for('broker.confirm') }}">Confirm IDP routing</a>
-          <p class="text index-description">We shouldn't automatically route the user to an IDP without getting them to confirm because we have no control if we send them to the wrong one. They might get stuck.</p>
+          <p class="text index-description">Initial attempt stopping the user getting stuck if our solution picks the wrong department to route them to. Not clear why we'd chosen that department.</p>
         </li>
         <li>
           <a href="{{ url_for('broker.choose') }}">Choose from a reduced list of IDPs</a>
-          <p class="text index-description">Similar to above but present a choice of IDPs the user could belong to.</p>
+          <p class="text index-description">A department might have multiple IdPs for their staff, therefore knowing the department always you to present the user with a reduced the IdP list.</p>
         </li>
         <li>
           <a href="{{ url_for('broker.email_suggestion') }}">IDP choice based on email</a>
-          <p class="text index-description">Given the email provided above give users a choice of IDP/department.</p>
+          <p class="text index-description">Playback reason for reducing IdP list, often the email. Then present users with a choice of IDP/department.</p>
         </li>
         <li>
           <a href="{{ url_for('broker.similar_email_suggestion') }}">IDP choice based on email being similar to another</a>
-          <p class="text index-description">Users might make mistakes entering their email, try to mitigate against these. If email looks similar to other departments then suggest those.</p>
+          <p class="text index-description">An untested idea to attempt to handle basic input errors a user may have when inputting their email. If it is close enough present the options for that department.</p>
         </li>
         <li>
           <a href="{{ url_for('broker.change_email') }}">User changes email address</a>
-          <p class="text index-description">Need to give user ability to re-enter email address incase they put an incorrect one in.</p>
+          <p class="text index-description">Need to give user ability to re-enter or change their email address. Not tested.</p>
         </li>
         <li>
           <a href="{{ url_for('broker.select') }}">Find and select from complete list of IDPs</a>
-          <p class="text index-description">The route if we have no information to use to filter the list of IDPs automatically. Present full list to user.</p>
+          <p class="text index-description">Early attempt to handle the ever growing list of IdPs by separating between departments and agencies. Not built or tested. Further information about how users distinguish their place of work is needed.</p>
         </li>
         <li>
           <a href="{{ url_for('broker.first_time') }}">Ask user if first time using broker</a>
-          <p class="text index-description">Optional: check to see if user has used the broker before. Similar approach to Verify. Depends on how visible we want the broker to be. Does the user need to know that much about it?</p>
+          <p class="text index-description">Check to see if user has used the broker before. Similar approach to Verify. Might change flow depending on if they have. Not tested or taken any further.</p>
         </li>
       </ul>
     </div>
