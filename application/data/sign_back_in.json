@@ -4,7 +4,7 @@
   "description": "Current and planned flows of the re-auth journey",
   "userjourneys": [
     {
-        "title": "Current sign back in jounrey (*no different than sign in)",
+        "title": "Current sign back in journey (no different than sign in)",
         "img_path": "round4/",
         "path": [{
           "caption": "Notify prod page v2",
@@ -35,7 +35,7 @@
         }
         ]
     },{
-        "title": "Sign in journey to test (interstitial may not be necessary)",
+        "title": "A sign in journey we'd like to test (interstitial may not be necessary)",
         "img_path": "round4/",
         "path": [{
           "caption": "Notify prod page v2",
@@ -51,6 +51,29 @@
           "caption": "Redirecting to IdP*",
           "imgref": "redirect_not_authenticated_v2.png",
           "note": ["Idea would be to reduce the time taken to redirect this page.", "We'd like to track the number of users that click the continue button, this would give us an indication that they don't need this screen any longer and we can consider not showing those users anymore"]
+        },{
+          "caption": "Redirecting to service*",
+          "imgref": "redirect_authenticated_v2.png"
+        },{
+          "caption": "Create account",
+          "imgref": "../round3/create_account_eligible.png"
+        }
+        ]
+    },{
+        "title": "Testing round 5",
+        "img_path": "round4/",
+        "path": [{
+          "caption": "Notify prod page v2",
+          "imgref": "../round3/notify_prod_page_v2.png"
+        },{
+          "caption": "Pre broker page",
+          "imgref": "pre_broker_panel_text_expanded.png"
+        },{
+          "caption": "Confirm department",
+          "imgref": "../round5/confirm_department_missing_playback.png"
+        },{
+          "caption": "Redirecting to IdP*",
+          "imgref": "redirect_not_authenticated_v2.png"
         },{
           "caption": "Redirecting to service*",
           "imgref": "redirect_authenticated_v2.png"
