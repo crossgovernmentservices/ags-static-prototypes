@@ -2,11 +2,13 @@
 
 {% block page_title %}Flask prototyping index{% endblock %}
 
+{% block proposition_header %}{% endblock %}
+
 {% block main_content %}
 
   <h1 class="heading-xlarge">Accessing GOV services</h1>
 
-  <p class="lede text">Static prototypes for the various pages and flow through the proposed broker.</p>
+  <p class="lede text">Static prototypes for the various pages and flow through the proposed AGS solution.</p>
 
   <h2 class="heading-large">Designs</h2>
 
@@ -16,7 +18,7 @@
       <p class="text index-description"></p>
     </li>
     <li>
-      <a href="{{ url_for('journeys.journeys_home') }}">Further journeys and diagrams</a>
+      <a href="{{ url_for('journeys.journeys_home') }}">Index of design work</a>
       <p class="text index-description"></p>
     </li>
   </ul>
@@ -69,31 +71,31 @@
       <ul class="list-bullet">
         <li>
           <a href="{{ url_for('broker.request_email') }}">Check if user knows their email</a>
-          <p class="text index-description">We can use the email to filter the list of IDPs so see if they user knows theirs.</p>
+          <p class="text index-description">Users generally use their department or email as an identifier to where they work. We can use this to determine the IdP to route them to.</p>
         </li>
         <li>
           <a href="{{ url_for('broker.mvp_select_idp') }}">Select IDP from a list</a>
-          <p class="text index-description"></p>
+          <p class="text index-description">The screen users who don't know their work email get taken to. It lists all the department IdPs integrated with the AGS solution and can be filtered. As more departments sign up the list will grow. It may get to the point where a different approach is required.</p>
         </li>
         <li>
           <a href="{{ url_for('broker.mvp_email_confirm_dept') }}">Confirm department based on email provided</a>
-          <p class="text index-description"></p>
+          <p class="text index-description">Playback the email the user provided. This allows them to see and correct mistakes. Then ask user to confirm department. Enforces understanding that email is used to determine department. Promotes trust is service when this suggestion is correct.</p>
         </li>
         <li>
           <a href="{{ url_for('broker.mvp_auto_routing') }}">Confirm department when coming through gateway again</a>
-          <p class="text index-description"></p>
+          <p class="text index-description">Subtly different to page above but similar pattern. Playback why the service has decided to route user to a given IdP. In most situations it will be because it remembers the email provided last time. Scope to test determining IdP based on other attributes (IP address, referring service, etc)</p>
         </li>
         <li>
           <a href="{{ url_for('broker.mvp_sign_out') }}">Sign out (with user ending on gateway)</a>
-          <p class="text index-description">Broker can catch sign out attempts from a service and handle them. A possibility is to present the user with a screen indicating they have been logged out of Service X, and that you are still signed in to their email account.</p>
+          <p class="text index-description">Catch sign out attempts from a service and handle them. End user on a page allowing them to head back to the service in question. Remind user they are still logged into their work email, this should provide clarity for those unsure whether signing out had logged out of everything. This needs more testing, it is not the normal place to end a sign out journey.</p>
         </li>
         <li>
           <a href="{{ url_for('broker.handto_idp') }}">Interstitial 1 - handoff to IDP</a>
-          <p class="text index-description"></p>
+          <p class="text index-description">Users can be uncomfortable when they unexpectedly visit a 3rd party site. Mitigate this by informing them of impending action. Scope to reduce the need for this over time. Worth trying a "Don't show me this again checkbox" although would need an alternative way for users to see that content if they need to.</p>
         </li>
         <li>
           <a href="{{ url_for('broker.handto_service') }}">Interstitial 2 - hand back to Service</a>
-          <p class="text index-description"></p>
+          <p class="text index-description">Completes the circle and informs users they have been authenticated and are being passed back to the referring service. Same as above re experimenting how often users need to see this or whether they will always need to.</p>
         </li>
       </ul>
     </div>
@@ -178,12 +180,8 @@
       <p class="text index-description">Example create account page for a GOV.UK styled IDP</p>
     </li>
     <li>
-      <a href="{{ url_for('base.product_page') }}">Product page</a>
+      <a href="{{ url_for('base.product_page') }}">Product page skeleton</a>
       <p class="text index-description">Product page for GOV Access, ready to be filled in</p>
-    </li>
-    <li>
-      <a href="{{ url_for('base.dex_example') }}">DEX example for Ken to copy</a>
-      <p class="text index-description">Styling DEX GOVUK style and with more than 3 choices. To update the list of IDPs/Departments edit the data/idps.json file.</p>
     </li>
   </ul>
 
