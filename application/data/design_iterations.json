@@ -179,20 +179,24 @@
           "imgref": "know_work_email_v2.png"
         },{
           "caption": "Confirm department",
-          "imgref": "confirm_department_denoise.png"
+          "imgref": "confirm_department_denoise.png",
+          "findings": ["Users reassured by service working out their department from email"]
         },{
           "caption": "Redirecting to IdP",
-          "imgref": "redirect_not_authenticated_v2.png"
+          "imgref": "redirect_not_authenticated_v2.png",
+          "findings": ["Users found the redirects too short to read the content. (there is no need them being auto redirects)"]
         },{
           "caption": "Email",
-          "imgref": "../azure/azure_email_page.png"
+          "imgref": "../azure/azure_email_page.png",
+          "findings": ["Users expected to have to click a link an email"]
         },{
           "caption": "Keycloak page",
           "imgref": "",
           "findings": ["Unexpectedly a keycloak page appearred after the user authenticated. It asked the user to fill in their first and last names."]
         },{
           "caption": "Redirecting to service",
-          "imgref": "redirect_authenticated_v2.png"
+          "imgref": "redirect_authenticated_v2.png",
+          "findings": ["1/2 user able to explain the process they'd be through to sign in"]
         },{
           "caption": "Create account",
           "imgref": "../round3/create_account_eligible.png"

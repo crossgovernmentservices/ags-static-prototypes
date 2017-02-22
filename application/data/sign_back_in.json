@@ -56,7 +56,8 @@
           "imgref": "redirect_authenticated_v2.png"
         },{
           "caption": "Create account",
-          "imgref": "../round3/create_account_eligible.png"
+          "imgref": "../round3/create_account_eligible.png",
+          "findings": ["Both users thought process to sign in/register was simple"]
         }
         ]
     },{
@@ -70,7 +71,8 @@
           "imgref": "pre_broker_panel_text_expanded.png"
         },{
           "caption": "Confirm department",
-          "imgref": "../round5/confirm_department_missing_playback.png"
+          "imgref": "../round5/confirm_department_missing_playback.png",
+          "findings": ["Both users thought they'd put their email in again as part of this process"]
         },{
           "caption": "Redirecting to IdP*",
           "imgref": "redirect_not_authenticated_v2.png"
