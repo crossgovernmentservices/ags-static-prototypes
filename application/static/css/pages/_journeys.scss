@@ -1,6 +1,8 @@
 /* ====================================================*/
 /* Layout and typography */
 
+$black: #0b0c0c;
+$text-colour: $black;
 
 body{
 	font-family: 'nta', sans-serif;
@@ -41,6 +43,12 @@ a{
 	padding-top: 3px;
 	margin-bottom:  10px;
 	list-style-type: none;
+
+  & > p {
+    margin-top: 5px;
+    color: $text-colour;
+    max-width: 30em;
+  }
 }
 .exemplar-list a:hover{
 	color: #2E8ACA;
