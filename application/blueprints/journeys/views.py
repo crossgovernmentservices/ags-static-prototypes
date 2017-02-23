@@ -21,3 +21,7 @@ def journeys_viewer(journey):
       return render_template('journeys/viewer.html', journeys=journeys)
     else:
       return render_template("404.html"), 404
+
+@journeys.route('/whats-next')
+def whats_next():
+    return render_template('next.html')
