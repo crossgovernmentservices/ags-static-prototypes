@@ -50,6 +50,11 @@ a{
     max-width: 30em;
   }
 }
+
+.text, .intro {
+  max-width: 30em;
+}
+
 .exemplar-list a:hover{
 	color: #2E8ACA;
   	text-decoration: none;
@@ -404,4 +409,18 @@ html.noscroll {
 .section-break {
   max-width: 66%;
   margin: 45px 0 15px;
+}
+
+/* ====================================================*/
+/* Screens */
+
+.content-page {
+  font-size: 19px;
+  .intro, h2 {
+    font-size: 24px;
+  }
+  h2 {
+    margin-top: em(45, 24);
+    margin-bottom: em(20, 24);
+  }
 }

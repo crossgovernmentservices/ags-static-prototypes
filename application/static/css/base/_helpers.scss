@@ -27,3 +27,10 @@
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
 }
+
+// Return ems from a pixel value
+// This assumes a base of 19px
+@function em($px, $base: 19) {
+  @return ($px / $base) + em;
+}
+

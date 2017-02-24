@@ -8,10 +8,52 @@
 
   <p class="app-header"><a href="/journeys">AGS design work</a></p>
 
-  <div id="content">
+  <div id="content" class="content-page">
     <h1>Design next steps</h1>
 
     <p class="intro">A collection of thoughts, plans and ideas about what to design and test next as well as the outstanding questions we have.</p>
+
+    <h2>Contents</h2>
+
+    <ul>
+      <li><a href="#keychallenge">Key challenge</a></li>
+      <li><a href="#todo">Things to do</a></li>
+      <li><a href="#totest">What to test</a></li>
+      <li><a href="#ideas">Ideas</a></li>
+    </ul>
+
+    <h2 id="keychallenge">Key challenge?</h2>
+    <p class="text">An aspect we've been keen to explore during the Alpha is how visible should the AGS service be? Sign in processes are bumps in a journey at the best of times so how much information do the users need to for this, potentially, unfamiliar process to be acceptable and at least not any worse?</p>
+
+    <p class="text">This challenge was also raised by the designer on the assessment panel as being the crux of the problem for design.</p>
+
+    <p class="text">Starting from the point of designing as little as possible we started the Alpha changing as little as possible and inserting as little as possible. The main change was the introduction of a step for the user to pick their department from a list. It was clear early on more support and context would be needed. We've gradually introduced more information and steps for the user but I still don't believe we've found the right balance yet.</p>
+
+    <h2 id="todo">Things to do / experiment with</h2>
+
+    <ul class="text">
+      <li>Remove the auto redirect aspect of interstitial pages</li>
+      <li>Change icons on interstitial pages. Currently too similar to Verify, need to move away from that.</li>
+      <li>Implement the search by department filtering of the full list of IdPs</li>
+      <li>Minimum requirements for an IdP to integrate. What are the essentials? What might cause issues with IdPs we want to integrate with, are there work arounds? How do we deliver the message? Could this become a blocker?</li>
+      <li>Accessibility focus. E.g. would icons appearing first on interstitial pages cause any issues for screen magnifiers. Verify have something similar, have they tested it we these types of users?</li>
+    </ul>
+
+    <h2 id="totest">What to test</h2>
+
+    <ul class="text">
+      <li>More testing with users not in incognito windows</li>
+      <li>More testing of the shortened sign back in journey</li>
+    </ul>
+
+    <h2 id="ideas">Ideas</h2>
+
+    <ul class="text">
+      <li>Consider testing a "don't show me this again" checkbox on the interstitials.</li>
+      <li>Need to test with users that share machines. Will this cause issues? How prevalent is this issue? (Border intelligence staff share machines)</li>
+      <li>We have currently only looked at users signing in. We felt this was a logical first step because if end users can’t log in then wouldn’t make sense to explore any service around departments adding their IdPs, dev teams building with this or department IT using it (e.g. with their leavers process). The alpha provide a service users would be comfortable with could be built. So worth exploring what level of “service” a service team would need to adopt this, will documentation alone suffice. Also what is the MVP of an IdP that can integrate with AGS, is it worth penning what we think at this point and seeing where the gaps / constraints with that are?</li>
+    </ul>
+
   </div>
 
 {% endblock %}
