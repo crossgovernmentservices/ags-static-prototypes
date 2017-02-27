@@ -423,4 +423,13 @@ html.noscroll {
     margin-top: em(45, 24);
     margin-bottom: em(20, 24);
   }
+  li {
+    margin-bottom: 0.25em;
+    padding-top: 0.25em;
+    p {
+      font-size: 16px;
+      padding: 0.25em 0 0.5em;
+      margin: 0;
+    }
+  }
 }
