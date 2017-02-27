@@ -2,3 +2,34 @@
   margin-bottom: 1em;
   font-size: 16px;
 }
+
+.content-wrapper {
+  @include media(tablet) {
+    float: left;
+    width: 66.66667%;
+  }
+}
+
+aside {
+  border-bottom: 1px solid #bbb;
+  margin: 0 0 2.5em;
+  padding-bottom: 1em;
+  overflow: hidden;
+}
+.page-nav {
+  font-size: 16px;
+  ol {
+    padding: 0;
+  }
+  li {
+    line-height: 1.25;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.25em;
+    list-style: decimal;
+    list-style-position: outside;
+    margin-right: 0.75em;
+    margin-left: 2em;
+    clear: left;
+  }
+}

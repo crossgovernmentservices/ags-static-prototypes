@@ -6,228 +6,250 @@
 
 {% block main_content %}
 
-  <h1 class="heading-xlarge">Accessing GOV services</h1>
+  <h1 class="heading-xlarge">Accessing GOV Services</h1>
 
-  <p class="lede text">Static prototypes for the various pages and flows through the proposed AGS solution.</p>
+  <div class="content-wrapper">
 
-  <p class="panel text">The AGS alpha finished early Feb 2017 and the beta is going out for procurement. This site has been expanded and cleaned up in the hope it'll provide the new team with a useful place to find all the existing design work and thinking.</p>
+    <aside>
+      <nav role="navigation" class="page-nav grid-row">
+        <ol class="column-half list-number">
+          <li><a href="#theproblem">The problem</a></li>
+          <li><a href="#designlinks">Design links</a></li>
+          <li><a href="#alphaflows">Alpha flows</a></li>
+        </ol>
+        <ol class="column-half" start="4">
+          <li><a href="#indivpages">Individual pages (Gateway, Notify, Other)</a></li>
+          <li><a href="#resourcesused">Resources used</a></li>
+        </ol>
+      </nav>
+    </aside>
 
-  <h2 class="heading-large">Design</h2>
+    <p class="panel text">The AGS alpha finished early Feb 2017 and the beta is going out for procurement. This site has been expanded and cleaned up in the hope it'll provide the new team with a useful place to find all the existing design work and thinking.</p>
 
-  <p class="text">A collection of the work design produced during the alpha. Includes plans we had if we were taking this forward into a private beta.</p>
+    <h2 id="theproblem" class="heading-large">The problem</h2>
 
-  <ul class="list-bullet">
-    <li>
-      <a href="/journeys/design_iterations">Design iterations of main journey</a>
-      <p class="text index-description"></p>
-    </li>
-    <li>
-      <a href="{{ url_for('journeys.journeys_home') }}">Index of design work</a>
-      <p class="text index-description"></p>
-    </li>
-    <li>
-      <a href="{{ url_for('journeys.whats_next') }}">Design next steps</a>
-      <p class="text index-description"></p>
-    </li>
-  </ul>
+    <p class="text">Accessing GaaP Services (AGS) attempts to fix the issue of account proliferation whilst also shifting risk and resource effort from service teams to department IT teams, teams already tasks with managing identity. It does this by replacing traditional email and password sign in mechanics with an alternative that defers authentication responsibility to the department and their own individual identity solution.</p>
 
-  <h2 class="heading-large">Flows</h2>
+    <p class="text">During the alpha we want to explore how feasible this is, both from the perspective of the users signing into services as well as testing the suitability of the technology in place.</p>
 
-  <p class="text">A collection of clickable prototype flows. Users can click all the way through journeys to get a feel for how the solution should work, how it fits in with a current service and what the various IdPs in operation look like.</p>
+    <h2 id="desinglinks" class="heading-large">Design links</h2>
 
-  <div class="grid-row">
-    <div class="column-half">
-      <ul class="list-bullet">
-        <li>
-          <a href="{{ url_for('notify.product_page2') }}">Main sign in journey</a>
-          <p class="text index-description"></p>
-        </li>
-        <li>
-          <a href="{{ url_for('notify.product_page2') }}">Sign back in journey</a>
-          <p class="text index-description"></p>
-        </li>
-      </ul>
+    <p class="text">A collection of the work design produced during the alpha. Includes plans we had if we were taking this forward into a private beta.</p>
+
+    <ul class="list-bullet">
+      <li>
+        <a href="/journeys/design_iterations">Design iterations of main journey</a>
+        <p class="text index-description"></p>
+      </li>
+      <li>
+        <a href="{{ url_for('journeys.journeys_home') }}">Index of design work</a>
+        <p class="text index-description"></p>
+      </li>
+      <li>
+        <a href="{{ url_for('journeys.whats_next') }}">Design next steps</a>
+        <p class="text index-description"></p>
+      </li>
+    </ul>
+
+    <h2 id="alphaflows" class="heading-large">Alpha flows</h2>
+
+    <p class="text">A collection of clickable prototype flows. Users can click all the way through journeys to get a feel for how the solution should work, how it fits in with a current service and what the various IdPs in operation look like.</p>
+
+    <div class="grid-row">
+      <div class="column-half">
+        <ul class="list-bullet">
+          <li>
+            <a href="{{ url_for('notify.product_page2') }}">Main sign in journey</a>
+            <p class="text index-description"></p>
+          </li>
+          <li>
+            <a href="{{ url_for('notify.product_page2') }}">Sign back in journey</a>
+            <p class="text index-description"></p>
+          </li>
+        </ul>
+      </div>
+      <div class="column-half">
+        <ul class="list-bullet">
+          <li>
+            <a href="{{ url_for('notify.product_page2') }}">Sign in journey (with Google IdP)</a>
+            <p class="text index-description"></p>
+          </li>
+          <li>
+            <a href="{{ url_for('notify.azure_productpage') }}">Sign in journey (with Azure IdP)</a>
+            <p class="text index-description"></p>
+          </li>
+          <li>
+            <a href="{{ url_for('notify.okta_productpage') }}">Sign in journey (with Okta IdP)</a>
+            <p class="text index-description"></p>
+          </li>
+          <li>
+            <a href="{{ url_for('notify.co_productpage') }}">Sign in journey (with CO IdP)</a>
+            <p class="text index-description"></p>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="column-half">
-      <ul class="list-bullet">
-        <li>
-          <a href="{{ url_for('notify.product_page2') }}">Sign in journey (with Google IdP)</a>
-          <p class="text index-description"></p>
-        </li>
-        <li>
-          <a href="{{ url_for('notify.azure_productpage') }}">Sign in journey (with Azure IdP)</a>
-          <p class="text index-description"></p>
-        </li>
-        <li>
-          <a href="{{ url_for('notify.okta_productpage') }}">Sign in journey (with Okta IdP)</a>
-          <p class="text index-description"></p>
-        </li>
-        <li>
-          <a href="{{ url_for('notify.co_productpage') }}">Sign in journey (with CO IdP)</a>
-          <p class="text index-description"></p>
-        </li>
-      </ul>
+
+
+    <h2 id="indivpages" class="heading-large">Individual pages (Gateway, Notify, Other)</h2>
+
+    <h3 class="heading-medium">Gateway pages</h3>
+
+    <p class="text">The gateway is the name given to the part of the solution that handled the user journeys. The goal is to help the user navigate to the IdP they belong to for authentication.</p>
+
+    <div class="grid-row">
+      <div class="column-half">
+        <h4 class="heading-small">Current pages</h4>
+        <ul class="list-bullet">
+          <li>
+            <a href="{{ url_for('broker.request_email') }}">Check if user knows their email</a>
+            <p class="text index-description">Users generally use their department or email as an identifier to where they work. We can use this to determine the IdP to route them to.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.mvp_select_idp') }}">Select IDP from a list</a>
+            <p class="text index-description">The screen users who don't know their work email get taken to. It lists all the department IdPs integrated with the AGS solution and can be filtered. As more departments sign up the list will grow. It may get to the point where a different approach is required.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.mvp_email_confirm_dept') }}">Confirm department based on email provided</a>
+            <p class="text index-description">Playback the email the user provided. This allows them to see and correct mistakes. Then ask user to confirm department. Enforces understanding that email is used to determine department. Promotes trust is service when this suggestion is correct.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.mvp_auto_routing') }}">Confirm department when coming through gateway again</a>
+            <p class="text index-description">Subtly different to page above but similar pattern. Playback why the service has decided to route user to a given IdP. In most situations it will be because it remembers the email provided last time. Scope to test determining IdP based on other attributes (IP address, referring service, etc)</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.mvp_sign_out') }}">Sign out (with user ending on gateway)</a>
+            <p class="text index-description">Catch sign out attempts from a service and handle them. End user on a page allowing them to head back to the service in question. Remind user they are still logged into their work email, this should provide clarity for those unsure whether signing out had logged out of everything. This needs more testing, it is not the normal place to end a sign out journey.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.handto_idp') }}">Interstitial 1 - handoff to IDP</a>
+            <p class="text index-description">Users can be uncomfortable when they unexpectedly visit a 3rd party site. Mitigate this by informing them of impending action. Scope to reduce the need for this over time. Worth trying a "Don't show me this again checkbox" although would need an alternative way for users to see that content if they need to.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.handto_service') }}">Interstitial 2 - hand back to Service</a>
+            <p class="text index-description">Completes the circle and informs users they have been authenticated and are being passed back to the referring service. Same as above re experimenting how often users need to see this or whether they will always need to.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="column-half">
+        <h4 class="heading-small">Previous page designs</h4>
+        <ul class="list-bullet">
+          <li>
+            <a href="{{ url_for('broker.confirm') }}">Confirm IDP routing</a>
+            <p class="text index-description">Initial attempt stopping the user getting stuck if our solution picks the wrong department to route them to. Not clear why we'd chosen that department.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.choose') }}">Choose from a reduced list of IDPs</a>
+            <p class="text index-description">A department might have multiple IdPs for their staff, therefore knowing the department always you to present the user with a reduced the IdP list.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.email_suggestion') }}">IDP choice based on email</a>
+            <p class="text index-description">Playback reason for reducing IdP list, often the email. Then present users with a choice of IDP/department.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.similar_email_suggestion') }}">IDP choice based on email being similar to another</a>
+            <p class="text index-description">An untested idea to attempt to handle basic input errors a user may have when inputting their email. If it is close enough present the options for that department.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.change_email') }}">User changes email address</a>
+            <p class="text index-description">Need to give user ability to re-enter or change their email address. Not tested.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.select') }}">Find and select from complete list of IDPs</a>
+            <p class="text index-description">Early attempt to handle the ever growing list of IdPs by separating between departments and agencies. Not built or tested. Further information about how users distinguish their place of work is needed.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('broker.first_time') }}">Ask user if first time using broker</a>
+            <p class="text index-description">Check to see if user has used the broker before. Similar approach to Verify. Might change flow depending on if they have. Not tested or taken any further.</p>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
 
+    <h3 class="heading-medium">Notify pages</h3>
 
-  <h2 class="heading-large">Individual pages</h2>
+    <p class="text">Below are the Notify pages we designed to enable our testing. These pages belong to the end service so it wouldn't be feasible to produce these for each service that adopts this sign in solution. The best approach, be that mandated changes, suggested patterns or something else needs to be explored and tested further.</p>
 
-  <h3 class="heading-medium">Gateway pages</h3>
-
-  <p class="text">The gateway is the name given to the part of the solution that handled the user journeys. The goal is to help the user navigate to the IdP they belong to for authentication.</p>
-
-  <div class="grid-row">
-    <div class="column-half">
-      <h4 class="heading-small">Current pages</h4>
-      <ul class="list-bullet">
-        <li>
-          <a href="{{ url_for('broker.request_email') }}">Check if user knows their email</a>
-          <p class="text index-description">Users generally use their department or email as an identifier to where they work. We can use this to determine the IdP to route them to.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.mvp_select_idp') }}">Select IDP from a list</a>
-          <p class="text index-description">The screen users who don't know their work email get taken to. It lists all the department IdPs integrated with the AGS solution and can be filtered. As more departments sign up the list will grow. It may get to the point where a different approach is required.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.mvp_email_confirm_dept') }}">Confirm department based on email provided</a>
-          <p class="text index-description">Playback the email the user provided. This allows them to see and correct mistakes. Then ask user to confirm department. Enforces understanding that email is used to determine department. Promotes trust is service when this suggestion is correct.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.mvp_auto_routing') }}">Confirm department when coming through gateway again</a>
-          <p class="text index-description">Subtly different to page above but similar pattern. Playback why the service has decided to route user to a given IdP. In most situations it will be because it remembers the email provided last time. Scope to test determining IdP based on other attributes (IP address, referring service, etc)</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.mvp_sign_out') }}">Sign out (with user ending on gateway)</a>
-          <p class="text index-description">Catch sign out attempts from a service and handle them. End user on a page allowing them to head back to the service in question. Remind user they are still logged into their work email, this should provide clarity for those unsure whether signing out had logged out of everything. This needs more testing, it is not the normal place to end a sign out journey.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.handto_idp') }}">Interstitial 1 - handoff to IDP</a>
-          <p class="text index-description">Users can be uncomfortable when they unexpectedly visit a 3rd party site. Mitigate this by informing them of impending action. Scope to reduce the need for this over time. Worth trying a "Don't show me this again checkbox" although would need an alternative way for users to see that content if they need to.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.handto_service') }}">Interstitial 2 - hand back to Service</a>
-          <p class="text index-description">Completes the circle and informs users they have been authenticated and are being passed back to the referring service. Same as above re experimenting how often users need to see this or whether they will always need to.</p>
-        </li>
-      </ul>
+    <div class="grid-row">
+      <div class="column-half">
+        <h4 class="heading-small">Current page designs</h4>
+        <ul class="list-bullet">
+          <li>
+            <a href="{{ url_for('notify.pre_broker') }}">Pre broker</a>
+            <p class="text index-description">Users have preconceived ideas about what should happen when they click create account on a service product page. We have introduced this page to combat the fact we are breaking the expected journey.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('notify.product_page2') }}">Product page 2 (13th Dec)</a>
+            <p class="text index-description">Latest version of the Notify product page with the links hijacked.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('notify.register_account') }}">Eligible email, continue create account</a>
+            <p class="text index-description">Confirm to users that they have been through a authentication journey which helps the service confirm they are eligible to use it. Use the data we get back from the IdP to populate fields where possible, allowing users to change those if necessary.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="column-half">
+        <h4 class="heading-small">Previous page designs</h4>
+        <ul class="list-bullet">
+          <li>
+            <a href="{{ url_for('notify.product_page') }}">Product page</a>
+            <p class="text index-description">Port a version of the Notify product page.</p>
+          </li>
+          <li>
+            <a href="{{ url_for('notify.post_sign_out') }}">Post sign out</a>
+            <p class="text index-description">Mock up of a sign out page in Notify. Used during early testing.</p>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="column-half">
-      <h4 class="heading-small">Previous page designs</h4>
-      <ul class="list-bullet">
-        <li>
-          <a href="{{ url_for('broker.confirm') }}">Confirm IDP routing</a>
-          <p class="text index-description">Initial attempt stopping the user getting stuck if our solution picks the wrong department to route them to. Not clear why we'd chosen that department.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.choose') }}">Choose from a reduced list of IDPs</a>
-          <p class="text index-description">A department might have multiple IdPs for their staff, therefore knowing the department always you to present the user with a reduced the IdP list.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.email_suggestion') }}">IDP choice based on email</a>
-          <p class="text index-description">Playback reason for reducing IdP list, often the email. Then present users with a choice of IDP/department.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.similar_email_suggestion') }}">IDP choice based on email being similar to another</a>
-          <p class="text index-description">An untested idea to attempt to handle basic input errors a user may have when inputting their email. If it is close enough present the options for that department.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.change_email') }}">User changes email address</a>
-          <p class="text index-description">Need to give user ability to re-enter or change their email address. Not tested.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.select') }}">Find and select from complete list of IDPs</a>
-          <p class="text index-description">Early attempt to handle the ever growing list of IdPs by separating between departments and agencies. Not built or tested. Further information about how users distinguish their place of work is needed.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('broker.first_time') }}">Ask user if first time using broker</a>
-          <p class="text index-description">Check to see if user has used the broker before. Similar approach to Verify. Might change flow depending on if they have. Not tested or taken any further.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
 
-  <h3 class="heading-medium">Notify pages</h3>
+    <h3 class="heading-medium">Other pages</h3>
 
-  <p class="text">Below are the Notify pages we designed to enable our testing. These pages belong to the end service so it wouldn't be feasible to produce these for each service that adopts this sign in solution. The best approach, be that mandated changes, suggested patterns or something else needs to be explored and tested further.</p>
+    <p class="text">A few other pages we mocked up during the alpha.</p>
+    <ul class="list-bullet">
+      <li>
+        <a href="{{ url_for('local.sign_in') }}">Sign in</a>
+        <p class="text index-description">Example sign in page for a GOV.UK styled IDP</p>
+      </li>
+      <li>
+        <a href="{{ url_for('local.create_account') }}">Create account</a>
+        <p class="text index-description">Example create account page for a GOV.UK styled IDP</p>
+      </li>
+      <li>
+        <a href="{{ url_for('base.product_page') }}">Product page skeleton</a>
+        <p class="text index-description">Product page for GOV Access, ready to be filled in</p>
+      </li>
+    </ul>
 
-  <div class="grid-row">
-    <div class="column-half">
-      <h4 class="heading-small">Current page designs</h4>
-      <ul class="list-bullet">
-        <li>
-          <a href="{{ url_for('notify.pre_broker') }}">Pre broker</a>
-          <p class="text index-description">Users have preconceived ideas about what should happen when they click create account on a service product page. We have introduced this page to combat the fact we are breaking the expected journey.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('notify.product_page2') }}">Product page 2 (13th Dec)</a>
-          <p class="text index-description">Latest version of the Notify product page with the links hijacked.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('notify.register_account') }}">Eligible email, continue create account</a>
-          <p class="text index-description">Confirm to users that they have been through a authentication journey which helps the service confirm they are eligible to use it. Use the data we get back from the IdP to populate fields where possible, allowing users to change those if necessary.</p>
-        </li>
-      </ul>
-    </div>
-    <div class="column-half">
-      <h4 class="heading-small">Previous page designs</h4>
-      <ul class="list-bullet">
-        <li>
-          <a href="{{ url_for('notify.product_page') }}">Product page</a>
-          <p class="text index-description">Port a version of the Notify product page.</p>
-        </li>
-        <li>
-          <a href="{{ url_for('notify.post_sign_out') }}">Post sign out</a>
-          <p class="text index-description">Mock up of a sign out page in Notify. Used during early testing.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
+    <h2 id="resourcesused" class="heading-large">Resources used</h2>
 
-  <h3 class="heading-medium">Other pages</h3>
+    <ul class="list-bullet">
+      <li>
+        <a href="https://github.com/colmjude/flask_prototyping">
+          Flask prototype documentation
+        </a>
+      </li>
+      <li>
+        <a href="http://govuk-elements.herokuapp.com/snippets/">
+          Guide to GOV.UK elements HTML
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/alphagov/govuk_frontend_toolkit">
+          Frontend toolkit repo
+        </a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/service-manual">
+          Service design manual
+        </a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/design-principles">
+          Government Digital Service Design Principles
+        </a>
+      </li>
+    </ul>
 
-  <p class="text">A few other pages we mocked up during the alpha.</p>
-  <ul class="list-bullet">
-    <li>
-      <a href="{{ url_for('local.sign_in') }}">Sign in</a>
-      <p class="text index-description">Example sign in page for a GOV.UK styled IDP</p>
-    </li>
-    <li>
-      <a href="{{ url_for('local.create_account') }}">Create account</a>
-      <p class="text index-description">Example create account page for a GOV.UK styled IDP</p>
-    </li>
-    <li>
-      <a href="{{ url_for('base.product_page') }}">Product page skeleton</a>
-      <p class="text index-description">Product page for GOV Access, ready to be filled in</p>
-    </li>
-  </ul>
-
-  <h2 class="heading-large">Resources used to build these</h2>
-
-  <ul class="list-bullet">
-    <li>
-      <a href="https://github.com/colmjude/flask_prototyping">
-        Flask prototype documentation
-      </a>
-    </li>
-    <li>
-      <a href="http://govuk-elements.herokuapp.com/snippets/">
-        Guide to GOV.UK elements HTML
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/alphagov/govuk_frontend_toolkit">
-        Frontend toolkit repo
-      </a>
-    </li>
-    <li>
-      <a href="https://www.gov.uk/service-manual">
-        Service design manual
-      </a>
-    </li>
-    <li>
-      <a href="https://www.gov.uk/design-principles">
-        Government Digital Service Design Principles
-      </a>
-    </li>
-</ul>
+</div>
 {% endblock %}
