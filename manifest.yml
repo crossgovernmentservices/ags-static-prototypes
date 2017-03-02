@@ -1,0 +1,5 @@
+---
+applications:
+- name: ags-prototypes
+  memory: 64M
+  buildpack: python_buildpack
