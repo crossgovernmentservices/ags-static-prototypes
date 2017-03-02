@@ -14,7 +14,7 @@ node {
     }
 
     stage("Build GOV.UK assets") {
-        sh "python manage.py install_all_govuk_assets --clean"
+        sh "venv/bin/python manage.py install_all_govuk_assets --clean"
     }
 
     if (!BRANCH_NAME.startsWith('PR-')) {
